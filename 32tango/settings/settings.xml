@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <profiles>
+        <profile>
+            <id>ns3</id>
+
+            <properties>
+                <downloadSources>true</downloadSources>
+            </properties>
+
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>http://ns3:8081/artifactory/repo</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>snapshots</id>
+                    <url>http://ns3:8081/artifactory/repo</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>http://ns3:8081/artifactory/repo</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>snapshots</id>
+                    <url>http://ns3:8081/artifactory/repo</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>
+
