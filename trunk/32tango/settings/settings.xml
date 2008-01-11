@@ -1,7 +1,5 @@
-<settings xmlns="http://maven.apache.org/POM/4.0.0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
     <profiles>
         <profile>
             <id>ns3</id>
@@ -13,37 +11,43 @@
                 <downloadSources>true</downloadSources>
             </properties>
 
-            <!-- Repository Conventions -->
             <repositories>
                 <repository>
                     <id>central</id>
-                    <name>Maven Repository Switchboard</name>
-                    <layout>default</layout>
                     <url>http://ns3:8081/artifactory/repo</url>
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
                 </repository>
+                <repository>
+                    <id>snapshots</id>
+                    <url>http://ns3:8081/artifactory/repo</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </repository>
             </repositories>
-            <!-- Plugin Repository Conventions -->
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
-                    <name>Maven Plugin Repository</name>
                     <url>http://ns3:8081/artifactory/repo</url>
-                    <layout>default</layout>
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>snapshots</id>
+                    <url>http://ns3:8081/artifactory/repo</url>
                     <releases>
-                        <updatePolicy>never</updatePolicy>
+                        <enabled>false</enabled>
                     </releases>
                 </pluginRepository>
             </pluginRepositories>
-
         </profile>
-
     </profiles>
+    <activeProfiles>
+        <activeProfile>ns3</activeProfile>
+    </activeProfiles>
 
     <servers>
         <server>
@@ -52,11 +56,5 @@
             <password>local</password>
         </server>
     </servers>
-
-    <activeProfiles>
-        <activeProfile>ns3</activeProfile>
-    </activeProfiles>
-
-
 </settings>
 
