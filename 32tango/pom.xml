@@ -615,6 +615,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+		<version>2.0.2</version>
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
@@ -690,6 +691,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
+		<version>2.2</version>
                 <configuration>
                     <check>
                         <totalLineRate>80</totalLineRate>
