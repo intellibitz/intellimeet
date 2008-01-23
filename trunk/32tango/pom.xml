@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>intellimeet</name>
     <url>http://localhost:8080/intellimeet</url>
-    <description>IntelliDesk - No more messy Desks!</description>
+    <description>IntelliMeet - Student Exchange!</description>
     <inceptionYear>2007</inceptionYear>
 
     <prerequisites>
@@ -136,14 +136,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
+		<version>2.0.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
+		<version>2.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+		<version>2.3</version>
                 <configuration>
                     <aggregate>true</aggregate>
                     <linkXref>true</linkXref>
@@ -152,6 +155,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
+		<version>2.3</version>
                 <configuration>
                     <linkXref>true</linkXref>
                     <sourceEncoding>utf-8</sourceEncoding>
@@ -166,6 +170,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+		<version>2.1</version>
                 <configuration>
                     <linkXref>true</linkXref>
                     <!--<configLocation>config/maven_checks.xml</configLocation>-->
@@ -174,6 +179,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>taglist-maven-plugin</artifactId>
+		<version>2.1</version>
                 <configuration>
                     <tags>
                         <tag>TODO</tag>
@@ -186,6 +192,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.2</version>
             </plugin>
         </plugins>
     </reporting>
@@ -615,7 +622,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-		<version>2.0.2</version>
+                <version>2.0.2</version>
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
