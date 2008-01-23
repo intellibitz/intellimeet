@@ -81,7 +81,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
-		<version>2.3.1</version>
+                <version>2.3.1</version>
                 <configuration>
                     <displayName>intellimeet</displayName>
                     <description>
@@ -125,7 +125,7 @@
                     <plugin>
                         <groupId>org.codehaus.cargo</groupId>
                         <artifactId>cargo-maven2-plugin</artifactId>
-			<version>0.3.1</version>
+                        <version>0.3.1</version>
                         <configuration>
                             <!-- Container configuration -->
                             <container>
