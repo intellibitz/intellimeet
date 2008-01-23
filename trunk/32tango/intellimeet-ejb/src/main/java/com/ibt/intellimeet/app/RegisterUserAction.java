@@ -34,13 +34,12 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- *
  * @author vijayan
  */
 @Stateful
 @Scope(EVENT)
 @Name("registerUserAction")
-public class RegisterUserAction 
+public class RegisterUserAction
         implements IRegisterUserActionLocal, Serializable
 {
     @Logger
@@ -65,18 +64,18 @@ public class RegisterUserAction
         if (user.getPassword().equals(verify))
         {
             List existing = entityManager.createQuery
-                    ("select u.username from User u where u.username=#{user.username}")
+                    ("select u.email from User u where u.email=#{user.email}")
                     .getResultList();
             if (existing.size() == 0)
             {
                 entityManager.persist(user);
                 // facesMessages.add("Successfully registered as #{user.username}");
-                log.info("Username #{user.username} already exists");
+                log.info("Username #{user.email} already exists");
                 registered = true;
             }
             else
             {
-                log.info("Username #{dummyUser.username} already exists");
+                log.info("Username #{user.email} already exists");
             }
         }
         else
@@ -116,7 +115,7 @@ public class RegisterUserAction
     @Remove
     public void destroy()
     {
-        log.info("dummySeamBean#destroy.. Done!");
+        log.info("registerUserAction#destroy.. Done!");
     }
 
 }
