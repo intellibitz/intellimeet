@@ -748,6 +748,7 @@
                 </property>
             </activation>
             <modules>
+                <module>intellimeet-ejb-tests</module>
                 <module>intellimeet-tests</module>
             </modules>
         </profile>
