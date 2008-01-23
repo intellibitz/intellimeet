@@ -1,0 +1,20 @@
+#summary College Requirements.
+#labels Phase-Requirements
+
+= Introduction =
+
+College must be able to:
+ Register
+ Adminster
+ Update Profile
+ Promote Courses
+ Highlight Students
+
+
+= Details =
+
+*Register*
+ Username / Password must be provided for registration.
+
+*Administer*
+ create users, create/update profile, create student profiles etc.,
