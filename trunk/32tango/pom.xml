@@ -18,13 +18,17 @@
     </prerequisites>
 
     <ciManagement>
-        <url>http://ns3:8082/continuum</url>
+        <url>http://ns2:8081/continuum</url>
         <system>continuum</system>
         <notifiers>
             <notifier>
                 <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
                 <configuration>
-                    <address>muthu@intellibitz.com</address>
+                    <address>continuum@ns2</address>
                 </configuration>
             </notifier>
         </notifiers>
@@ -36,6 +40,7 @@
         <developerConnection>
             scm:svn:https://intellimeet.googlecode.com/svn/trunk/
         </developerConnection>
+        <tag>HEAD</tag>
         <url>http://intellimeet.googlecode.com/svn/trunk/</url>
     </scm>
 
@@ -49,8 +54,10 @@
             <url>http://groups.google.com/group/intellimeet</url>
             <roles>
                 <role>Project Owner</role>
+                <role>architect</role>
+                <role>developer</role>
             </roles>
-            <timezone>-5.5</timezone>
+            <timezone>+5.5</timezone>
             <properties>
                 <property>muthu.ramadoss@gmail.com</property>
             </properties>
