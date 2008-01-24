@@ -44,13 +44,10 @@
     </ciManagement>
 
     <scm>
-        <connection>scm:svn:http://intellimeet.googlecode.com/svn/trunk/
-        </connection>
-        <developerConnection>
-            scm:svn:https://intellimeet.googlecode.com/svn/trunk/
-        </developerConnection>
+        <connection>scm:svn:http://intellimeet.googlecode.com/svn/trunk/32tango</connection>
+        <developerConnection>scm:svn:https://intellimeet.googlecode.com/svn/trunk/32tango</developerConnection>
         <tag>HEAD</tag>
-        <url>http://intellimeet.googlecode.com/svn/trunk/</url>
+        <url>http://intellimeet.googlecode.com/svn/trunk/32tango</url>
     </scm>
 
     <developers>
