@@ -17,6 +17,13 @@
         <maven>2.0.8</maven>
     </prerequisites>
 
+    <scm>
+        <connection>scm:svn:http://intellimeet.googlecode.com/svn/trunk/32tango</connection>
+        <developerConnection>scm:svn:https://intellimeet.googlecode.com/svn/trunk/32tango</developerConnection>
+        <tag>HEAD</tag>
+        <url>http://intellimeet.googlecode.com/svn/trunk/32tango</url>
+    </scm>
+
     <ciManagement>
         <url>http://ns2:8081/continuum</url>
         <system>continuum</system>
@@ -25,21 +32,134 @@
                 <type>mail</type>
                 <sendOnError>true</sendOnError>
                 <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>true</sendOnSuccess>
+                <sendOnWarning>true</sendOnWarning>
+                <configuration>
+                    <address>muthu.ramadoss@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
                 <sendOnSuccess>false</sendOnSuccess>
                 <sendOnWarning>false</sendOnWarning>
                 <configuration>
-                    <address>muthu.ramadoss@gmail.com,msg2hari@gmail.com,gunabalans@gmail.com,muthu.p.krishnan@gmail.com,jailani.bnu@gmail.com,soft.ashok@gmail.com,archana.14nair@gmail.com,jeevaclickme@gmail.com,prasannaloud@gmail.com,vijayansrgs@gmail.com,mahalakshmipawar8@gmail.com,kumarsiva80@gmail.com,ignatiuesarun@gmail.com</address>
+                    <address>msg2hari@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>gunabalans@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>muthu.p.krishnan@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>jailani.bnu@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>archana.14nair@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>jeevaclickme@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>prasannaloud@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>vijayansrgs@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>mahalakshmipawar8@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>kumarsiva80@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>soft.ashok@gmail.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>ignatiuesarun@gmail.com</address>
                 </configuration>
             </notifier>
         </notifiers>
     </ciManagement>
-
-    <scm>
-        <connection>scm:svn:http://intellimeet.googlecode.com/svn/trunk/32tango</connection>
-        <developerConnection>scm:svn:https://intellimeet.googlecode.com/svn/trunk/32tango</developerConnection>
-        <tag>HEAD</tag>
-        <url>http://intellimeet.googlecode.com/svn/trunk/32tango</url>
-    </scm>
 
     <developers>
         <developer>
@@ -52,6 +172,19 @@
             <roles>
                 <role>Project Owner</role>
                 <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+5.5</timezone>
+        </developer>
+        <developer>
+            <name>Hari</name>
+            <id>msg2hari</id>
+            <email>msg2hari@gmail.com</email>
+            <organization>IntelliBitz Technologies</organization>
+            <organizationUrl>http://www.intellibitz.com</organizationUrl>
+            <url>http://groups.google.com/group/intellimeet</url>
+            <roles>
+                <role>teamlead</role>
                 <role>developer</role>
             </roles>
             <timezone>+5.5</timezone>
@@ -74,9 +207,27 @@
     <contributors>
         <contributor>
             <name>Gunabalan Sellan</name>
+            <id>gunabalans</id>
+            <email>gunabalans@gmail.com</email>
+            <organization>IntelliBitz Technologies</organization>
+            <organizationUrl>http://www.intellibitz.com</organizationUrl>
+            <url>http://groups.google.com/group/intellimeet</url>
             <roles>
-                <role>Developer</role>
+                <role>manager</role>
             </roles>
+            <timezone>+5.5</timezone>
+        </contributor>
+        <contributor>
+            <name>Muthu Krishnan</name>
+            <id>muthuk</id>
+            <email>muthu.p.krishnan@gmail.com</email>
+            <organization>IntelliBitz Technologies</organization>
+            <organizationUrl>http://www.intellibitz.com</organizationUrl>
+            <url>http://groups.google.com/group/intellimeet</url>
+            <roles>
+                <role>sysadmin</role>
+            </roles>
+            <timezone>+5.5</timezone>
         </contributor>
     </contributors>
 
