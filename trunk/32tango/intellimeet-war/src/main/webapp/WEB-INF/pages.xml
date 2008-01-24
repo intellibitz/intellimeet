@@ -19,15 +19,31 @@
     <page view-id="/dummy/registerDummyUser.xhtml">
 
         <action if="#{validation.failed}"
-                execute="#{dummySeamBean.invalid}"/>
+                execute="#{dummyUserAction.invalid}"/>
 
         <navigation>
-            <rule if="#{dummySeamBean.registered}">
+            <rule if="#{dummyUserAction.registered}">
                 <redirect view-id="/home.xhtml"/>
             </rule>
         </navigation>
 
     </page>
+
+    <!-- Added for Registeration with User registerUser.xhtml-->
+    <page view-id="/register/registerUser.xhtml">
+
+        <action if="#{validation.failed}"
+                execute="#{registerUserAction.invalid}"/>
+
+        <navigation>
+            <rule if="#{registerUserAction.registered}">
+                <redirect view-id="/home.xhtml"/>
+            </rule>
+        </navigation>
+
+    </page>
+
+
 
     <exception class="org.jboss.seam.security.NotLoggedInException">
         <redirect view-id="/home.xhtml">

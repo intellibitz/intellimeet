@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:s="http://jboss.com/products/seam/taglib"
+      xmlns:a="http://richfaces.org/a4j">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>IntelliMeet User Registration</title>
+    <link href="intellimeet.css" rel="stylesheet" type="text/css"/>
+</head>
+       <body>
+        
+        <h:form id="registerUser">
+        
+         
+         <ui:composition template="comptemplateLogin.xhtml">
+               
+               <ui:define name="face1">
+                  <center><h2>Registration</h2></center>
+                  <h3>Welcome to the Intellimeet world..........</h3>
+             </ui:define>
+             
+             
+             
+           
+            <ui:define name="email">Enter Your email :<br/>
+                  <h:inputText id="name" value="#{user.email}" required="true">
+                <!-- <a:support event="onblur" reRender="nameDecorate"/>-->
+                 </h:inputText> <br/><br/>
+            </ui:define>
+            
+            
+            <ui:define name="password">Enter Password :<br/>
+                  <h:inputSecret  id="name" value="#{user.password}" required="true">
+              <!-- <a:support event="onblur" reRender="nameDecorate"/> --> 
+                 </h:inputSecret> <br/><br/>
+            </ui:define>
+            
+            
+            <ui:define name="verify">Verify Password :<br/>
+                  <h:inputSecret  id="name" value="#{registerUserAction.verify}" required="true">
+               <!-- <a:support event="onblur" reRender="nameDecorate"/> -->
+                 </h:inputSecret> <br/><br/>
+            </ui:define>
+            
+            
+           <ui:define name="registerUser">
+                  <h:commandButton id="RegisterUserAction" value="Register" action="#{registerUserAction.register}"/>
+                        <s:button id="cancel" value="Cancel"
+                                  view="/home.xhtml"/>
+           </ui:define>
+           
+      </ui:composition>
+      
+      
+        </h:form>
+      
+     
+     
+     </body>
+      
+      
+</html>
