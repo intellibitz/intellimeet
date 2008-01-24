@@ -28,16 +28,7 @@
                 <sendOnSuccess>false</sendOnSuccess>
                 <sendOnWarning>false</sendOnWarning>
                 <configuration>
-                    <address>muthu.ramadoss@gmail.com</address>
-                    <address>jailani.bnu@gmail.com</address>
-                    <address>soft.ashok@gmail.com</address>
-                    <address>archana.14nair@gmail.com</address>
-                    <address>jeevaclickme@gmail.com</address>
-                    <address>prasannaloud@gmail.com</address>
-                    <address>vijayansrgs@gmail.com</address>
-                    <address>mahalakshmipawar8@gmail.com</address>
-                    <address>kumarsiva80@gmail.com</address>
-                    <address>ignatiuesarun@gmail.com</address>
+                    <address>muthu.ramadoss@gmail.com,msg2hari@gmail.com,gunabalans@gmail.com,muthu.p.krishnan@gmail.com,jailani.bnu@gmail.com,soft.ashok@gmail.com,archana.14nair@gmail.com,jeevaclickme@gmail.com,prasannaloud@gmail.com,vijayansrgs@gmail.com,mahalakshmipawar8@gmail.com,kumarsiva80@gmail.com,ignatiuesarun@gmail.com</address>
                 </configuration>
             </notifier>
         </notifiers>
