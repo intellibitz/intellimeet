@@ -3,6 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/maven-v4_0_0.xsd">
 
+<!--
+$HeadURL::                                                                      $: Head URL of last commit
+$Id::                                                                           $: Id of last commit
+$Rev::                                                                          $: Revision of last commit
+$Author::                                                                       $: Author of last commit
+$Date::                                                                         $: Date of last commit
+-->
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ibt.intellimeet</groupId>
     <artifactId>intellimeet</artifactId>
@@ -34,6 +42,16 @@
                 <sendOnFailure>true</sendOnFailure>
                 <sendOnSuccess>true</sendOnSuccess>
                 <sendOnWarning>true</sendOnWarning>
+                <configuration>
+                    <address>intellimeet@googlegroups.com</address>
+                </configuration>
+            </notifier>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
                 <configuration>
                     <address>muthu.ramadoss@gmail.com</address>
                 </configuration>
