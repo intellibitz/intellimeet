@@ -382,6 +382,11 @@
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.2</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.skins</groupId>
+                <artifactId>maven-default-skin</artifactId>
+                <version>1.0</version>
+            </plugin>
         </plugins>
     </reporting>
 
