@@ -25,6 +25,53 @@
         <maven>2.0.8</maven>
     </prerequisites>
 
+    <organization>
+        <name>IntelliBitz Technologies</name>
+        <url>http://www.intellibitz.com/</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://ns3:8081/artifactory/repo</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snapshots</id>
+            <url>http://ns3:8081/artifactory/repo</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>http://ns3:8081/artifactory/repo</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>snapshots</id>
+            <url>http://ns3:8081/artifactory/repo</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
     <scm>
         <connection>
             scm:svn:http://intellimeet.googlecode.com/svn/trunk/32tango
@@ -251,53 +298,6 @@
         </contributor>
     </contributors>
 
-    <organization>
-        <name>IntelliBitz Technologies</name>
-        <url>http://www.intellibitz.com/</url>
-    </organization>
-
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>http://ns3:8081/artifactory/repo</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>snapshots</id>
-            <url>http://ns3:8081/artifactory/repo</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <url>http://ns3:8081/artifactory/repo</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>snapshots</id>
-            <url>http://ns3:8081/artifactory/repo</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </pluginRepository>
-    </pluginRepositories>
-
     <properties>
         <seamVersion>2.0.0.GA</seamVersion>
         <richfacesVersion>3.1.2.SP1</richfacesVersion>
@@ -381,11 +381,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.2</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.skins</groupId>
-                <artifactId>maven-default-skin</artifactId>
-                <version>1.0</version>
             </plugin>
         </plugins>
     </reporting>
@@ -846,11 +841,6 @@
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>2.3.1</version>
                 <configuration>
-                    <!--
-                                        <outputDirectory>
-                                            ${project.build.directory}/surefire-reports
-                                        </outputDirectory>
-                    -->
                     <reportSets>
                         <reportSet>
                             <reports>
