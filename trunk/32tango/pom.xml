@@ -930,6 +930,8 @@
             <modules>
                 <module>intellimeet-ejb-tests</module>
                 <module>intellimeet-war-tests</module>
+                <module>intellimeet-ear-tests</module>
+                <module>intellimeet-http-tests</module>
                 <module>intellimeet-tests</module>
             </modules>
         </profile>
