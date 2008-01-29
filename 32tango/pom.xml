@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/maven-v4_0_0.xsd">
 
-<!--
-$HeadURL::                                                                      $: Head URL of last commit
-$Id::                                                                           $: Id of last commit
-$Rev::                                                                          $: Revision of last commit
-$Author::                                                                       $: Author of last commit
-$Date::                                                                         $: Date of last commit
--->
+    <!--
+    $HeadURL::                                                                      $: Head URL of last commit
+    $Id::                                                                           $: Id of last commit
+    $Rev::                                                                          $: Revision of last commit
+    $Author::                                                                       $: Author of last commit
+    $Date::                                                                         $: Date of last commit
+    -->
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ibt.intellimeet</groupId>
@@ -26,8 +26,12 @@ $Date::                                                                         
     </prerequisites>
 
     <scm>
-        <connection>scm:svn:http://intellimeet.googlecode.com/svn/trunk/32tango</connection>
-        <developerConnection>scm:svn:https://intellimeet.googlecode.com/svn/trunk/32tango</developerConnection>
+        <connection>
+            scm:svn:http://intellimeet.googlecode.com/svn/trunk/32tango
+        </connection>
+        <developerConnection>
+            scm:svn:https://intellimeet.googlecode.com/svn/trunk/32tango
+        </developerConnection>
         <tag>HEAD</tag>
         <url>http://intellimeet.googlecode.com/svn/trunk/32tango</url>
     </scm>
@@ -930,6 +934,7 @@ $Date::                                                                         
             </activation>
             <modules>
                 <module>intellimeet-ejb-tests</module>
+                <module>intellimeet-war-tests</module>
                 <module>intellimeet-tests</module>
             </modules>
         </profile>
