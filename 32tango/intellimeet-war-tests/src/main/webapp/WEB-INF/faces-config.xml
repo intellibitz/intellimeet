@@ -2,6 +2,13 @@
               xmlns="http://java.sun.com/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+    <!--
+    $Id:: settings.xml 34 2008-01-29 10:19:22Z muthu.ramadoss                       $: Id of last commit
+    $Rev:: 34                                                                       $: Revision of last commit
+    $Author:: muthu.ramadoss                                                        $: Author of last commit
+    $Date:: 2008-01-29 15:49:22 +0530 (Tue, 29 Jan 2008)                            $: Date of last commit
+    $HeadURL:: https://intellimeet.googlecode.com/svn/trunk/32tango/settings/settin#$: Head URL of last commit
+    -->
     <application>
         <view-handler>
             com.sun.facelets.FaceletViewHandler
