@@ -23,12 +23,10 @@ $HeadURL::                                                                      
     <div id="header">
         <div id="title">Intellimeet Web Testing</div>
         <div id="status">
-            Welcome #{user.name}
-            | <s:link id="search" view="/main.xhtml" value="Search"
+            Welcome User
+            | <s:link id="home" view="/home.xhtml" value="Search"
                       propagation="none"/>
-            | <s:link id="settings" view="/password.xhtml" value="Settings"
-                      propagation="none"/>
-            | <s:link id="logout" action="#{identity.logout}" value="Logout"/>
+            | <s:link id="logout" action="logout" value="Logout"/>
         </div>
     </div>
     <div id="container">
@@ -39,7 +37,7 @@ $HeadURL::                                                                      
             <ui:insert name="content"/>
         </div>
     </div>
-    <div id="footer">Created with JBoss Seam 2.0, JBoss EJB 3.0, JSF 1.2, Hibernate 3 and Facelets</div>
+    <div id="footer">Created with JBoss Seam 2.0, JBoss EJB 3.0, JSF 1.2, Hibernate 3 and Facelets with RichFaces</div>
 </div>
 </body>
 </html>
