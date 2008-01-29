@@ -1,59 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-$Id:: settings.xml 34 2008-01-29 10:19:22Z muthu.ramadoss                       $: Id of last commit
-$Rev:: 34                                                                       $: Revision of last commit
-$Author:: muthu.ramadoss                                                        $: Author of last commit
-$Date:: 2008-01-29 15:49:22 +0530 (Tue, 29 Jan 2008)                            $: Date of last commit
-$HeadURL:: https://intellimeet.googlecode.com/svn/trunk/32tango/settings/settin#$: Head URL of last commit
+$Id::                                                                           $: Id of last commit
+$Rev::                                                                          $: Revision of last commit
+$Author::                                                                       $: Author of last commit
+$Date::                                                                         $: Date of last commit
+$HeadURL::                                                                      $: Head URL of last commit
 -->
 <pages xmlns="http://jboss.com/products/seam/pages"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://jboss.com/products/seam/pages http://jboss.com/products/seam/pages-2.0.xsd"
-
-       no-conversation-view-id="/main.xhtml"
-       login-view-id="/home.xhtml">
+       no-conversation-view-id="/home.xhtml"
+       login-view-id="/home.xhtml"
+        >
 
     <page view-id="/home.xhtml">
 
-        <navigation>
-            <rule if="#{identity.loggedIn}">
-                <redirect view-id="/main.xhtml"/>
-            </rule>
-        </navigation>
+    </page>
+
+    <page view-id="/richfaces/pleasewait_ajax.xhtml">
 
     </page>
 
-    <page view-id="/dummy/registerDummyUser.xhtml">
-
-        <action if="#{validation.failed}"
-                execute="#{dummySeamBean.invalid}"/>
-
-        <navigation>
-            <rule if="#{dummySeamBean.registered}">
-                <redirect view-id="/home.xhtml"/>
-            </rule>
-        </navigation>
+    <page view-id="/richfaces/randomControls.xhtml">
 
     </page>
-
-    <page view-id="/app-ejb-tests/registerUserActionTest.xhtml">
-
-        <action if="#{validation.failed}"
-                execute="#{registerUserAction.invalid}"/>
-
-        <navigation>
-            <rule if="#{registerUserAction.registered}">
-                <redirect view-id="/home.xhtml"/>
-            </rule>
-        </navigation>
-
-    </page>
-
-    <exception class="org.jboss.seam.security.NotLoggedInException">
-        <redirect view-id="/home.xhtml">
-            <message severity="warn">You must be logged in to use this feature
-            </message>
-        </redirect>
-    </exception>
 
 </pages>
