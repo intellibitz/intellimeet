@@ -10,6 +10,7 @@ $HeadURL::                                                                      
 -->
 */
 
+import com.ibt.intellimeet.data.DummyUser;
 import static org.jboss.seam.ScopeType.EVENT;
 import org.jboss.seam.annotations.Destroy;
 import org.jboss.seam.annotations.In;
@@ -25,8 +26,6 @@ import javax.persistence.PersistenceContext;
 import java.io.Serializable;
 import java.util.List;
 
-import com.ibt.intellimeet.data.DummyUser;
-
 /**
  * Created by IntelliJ IDEA. User: sara Date: Dec 15, 2007 Time: 12:42:47 PM To
  * change this template use File | Settings | File Templates.
@@ -38,8 +37,10 @@ import com.ibt.intellimeet.data.DummyUser;
 public class DummyUserAction
         implements IDummyUserLocal, Serializable
 {
+    static final long serialVersionUID = 2973374377453022888L;
+
     @Logger
-    Log log;
+    transient Log log;
 
     @In(required = true)
     private DummyUser dummyUser;
@@ -59,15 +60,10 @@ public class DummyUserAction
     {
         if (dummyUser.getPassword().equals(verify))
         {
-/*
-             List existing = entityManager.createQuery
-                     ("select u.username from DummyUser u where u.username=:username")
-               .setParameter("username", dummyUser.getUsername())
-*/
             List existing = entityManager.createQuery
                     ("select u.username from DummyUser u where u.username=#{dummyUser.username}")
                     .getResultList();
-            if (existing.size() == 0)
+            if (existing.isEmpty())
             {
                 entityManager.persist(dummyUser);
                 // facesMessages.add("Successfully registered as #{dummyUser.username}");
@@ -90,6 +86,21 @@ public class DummyUserAction
     public void invalid()
     {
         log.info("Please try again");
+    }
+
+    public EntityManager getEntityManager()
+    {
+        return entityManager;
+    }
+
+    public void setEntityManager(EntityManager entityManager)
+    {
+        this.entityManager = entityManager;
+    }
+
+    public void setRegistered(boolean registered)
+    {
+        this.registered = registered;
     }
 
     public boolean isRegistered()

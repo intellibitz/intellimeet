@@ -34,20 +34,26 @@ public class DummyUser
         implements Serializable
 {
 
+    static final long serialVersionUID = 2973374377453022888L;
+
     private long id;
     private String username;
     private String password;
     private String name;
+
+    /**
+     * Default constructor
+     */
+    public DummyUser()
+    {
+        super ();
+    }
 
     public DummyUser(String name, String password, String username)
     {
         this.name = name;
         this.password = password;
         this.username = username;
-    }
-
-    public DummyUser()
-    {
     }
 
     @Id

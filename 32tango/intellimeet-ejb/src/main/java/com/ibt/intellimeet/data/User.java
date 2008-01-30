@@ -32,12 +32,18 @@ public class User
         implements Serializable
 {
 
+    static final long serialVersionUID = 2973374377453022888L;
+
     private long id;
     private String password;
     private String email;
 
+    /**
+     * Default constructor
+     */
     public User()
     {
+        super ();
     }
 
     public User(String email, String password)

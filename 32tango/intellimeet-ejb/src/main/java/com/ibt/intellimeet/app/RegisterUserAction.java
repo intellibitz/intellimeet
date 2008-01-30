@@ -52,8 +52,11 @@ import java.util.List;
 public class RegisterUserAction
         implements IRegisterUserActionLocal, Serializable
 {
+
+    static final long serialVersionUID = 2973374377453022888L;
+
     @Logger
-    Log log;
+    transient Log log;
 
     @In(required = true)
     private User user;
@@ -76,7 +79,7 @@ public class RegisterUserAction
             List existing = entityManager.createQuery
                     ("select u.email from User u where u.email=#{user.email}")
                     .getResultList();
-            if (existing.size() == 0)
+            if (existing.isEmpty())
             {
                 entityManager.persist(user);
                 // facesMessages.add("Successfully registered as #{user.username}");
@@ -104,6 +107,21 @@ public class RegisterUserAction
     public void setVerify(String verify)
     {
         this.verify = verify;
+    }
+
+    public EntityManager getEntityManager()
+    {
+        return entityManager;
+    }
+
+    public void setEntityManager(EntityManager entityManager)
+    {
+        this.entityManager = entityManager;
+    }
+
+    public void setRegistered(boolean registered)
+    {
+        this.registered = registered;
     }
 
     public boolean isRegistered()
