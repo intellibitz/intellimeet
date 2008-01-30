@@ -1,20 +1,3 @@
-/*
- *  Copyright 2008 vijayan.
- * 
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- * 
- *       http://www.apache.org/licenses/LICENSE-2.0
- * 
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- *  under the License.
- */
-
 package com.ibt.intellimeet.app;
 
 /*
@@ -27,7 +10,6 @@ $HeadURL::                                                                      
 -->
 */
 
-import com.ibt.intellimeet.data.User;
 import static org.jboss.seam.ScopeType.EVENT;
 import org.jboss.seam.annotations.Destroy;
 import org.jboss.seam.annotations.In;
@@ -43,20 +25,24 @@ import javax.persistence.PersistenceContext;
 import java.io.Serializable;
 import java.util.List;
 
+import com.ibt.intellimeet.data.DummyUser;
+
 /**
- * @author vijayan
+ * Created by IntelliJ IDEA. User: sara Date: Dec 15, 2007 Time: 12:42:47 PM To
+ * change this template use File | Settings | File Templates.
  */
 @Stateful
 @Scope(EVENT)
-@Name("registerUserAction")
-public class RegisterUserAction
-        implements IRegisterUserActionLocal, Serializable
+@Name("dummyUserAction")
+//@JndiName ("DummyUserAction/local")
+public class DummyUserAction
+        implements IDummyUserLocal, Serializable
 {
     @Logger
     Log log;
 
     @In(required = true)
-    private User user;
+    private DummyUser dummyUser;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -64,28 +50,33 @@ public class RegisterUserAction
     private String verify;
     private boolean registered;
 
-    public User findUser(long id)
+    public DummyUser findDummyUser(long id)
     {
-        return entityManager.find(User.class, id);
+        return entityManager.find(DummyUser.class, id);
     }
 
     public long register()
     {
-        if (user.getPassword().equals(verify))
+        if (dummyUser.getPassword().equals(verify))
         {
+/*
+             List existing = entityManager.createQuery
+                     ("select u.username from DummyUser u where u.username=:username")
+               .setParameter("username", dummyUser.getUsername())
+*/
             List existing = entityManager.createQuery
-                    ("select u.email from User u where u.email=#{user.email}")
+                    ("select u.username from DummyUser u where u.username=#{dummyUser.username}")
                     .getResultList();
             if (existing.size() == 0)
             {
-                entityManager.persist(user);
-                // facesMessages.add("Successfully registered as #{user.username}");
-                log.info("Username #{user.email} already exists");
+                entityManager.persist(dummyUser);
+                // facesMessages.add("Successfully registered as #{dummyUser.username}");
+                log.info("Username #{dummyUser.username} already exists");
                 registered = true;
             }
             else
             {
-                log.info("Username #{user.email} already exists");
+                log.info("Username #{dummyUser.username} already exists");
             }
         }
         else
@@ -93,7 +84,17 @@ public class RegisterUserAction
             log.info("Re-enter your password");
             verify = null;
         }
-        return user.getId();
+        return dummyUser.getId();
+    }
+
+    public void invalid()
+    {
+        log.info("Please try again");
+    }
+
+    public boolean isRegistered()
+    {
+        return registered;
     }
 
     public String getVerify()
@@ -106,26 +107,30 @@ public class RegisterUserAction
         this.verify = verify;
     }
 
-    public boolean isRegistered()
+    public void run()
     {
-        return registered;
+        log.info("dummySeamBean#run.. Done!");
     }
 
-    public User getUser()
+    public void cancel()
     {
-        return user;
-    }
-
-    public void setUser(User user)
-    {
-        this.user = user;
+        log.info("dummySeamBean#cancel.. Done!");
     }
 
     @Destroy
     @Remove
     public void destroy()
     {
-        log.info("registerUserAction#destroy.. Done!");
+        log.info("dummySeamBean#destroy.. Done!");
     }
 
+    public DummyUser getDummyUser()
+    {
+        return dummyUser;
+    }
+
+    public void setDummyUser(DummyUser dummyUser)
+    {
+        this.dummyUser = dummyUser;
+    }
 }

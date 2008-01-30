@@ -12,6 +12,7 @@ $HeadURL::                                                                      
 
 import org.hibernate.validator.Length;
 import org.hibernate.validator.NotNull;
+import org.hibernate.validator.Pattern;
 import static org.jboss.seam.ScopeType.SESSION;
 import org.jboss.seam.annotations.Name;
 import org.jboss.seam.annotations.Scope;
@@ -24,26 +25,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
-@Name("user")
+@Name("dummyUser")
+//@JndiName("DummyUser/local")
 @Scope(SESSION)
 @Entity
-@Table(name = "USERS")
-public class User
+@Table(name = "DUMMYUSER")
+public class DummyUser
         implements Serializable
 {
 
     private long id;
+    private String username;
     private String password;
-    private String email;
+    private String name;
 
-    public User()
+    public DummyUser(String name, String password, String username)
     {
+        this.name = name;
+        this.password = password;
+        this.username = username;
     }
 
-    public User(String email, String password)
+    public DummyUser()
     {
-        this.email = email;
-        this.password = password;
     }
 
     @Id
@@ -61,14 +65,14 @@ public class User
 
     @NotNull
     @Length(max = 100)
-    public String getEmail()
+    public String getName()
     {
-        return email;
+        return name;
     }
 
-    public void setEmail(String email)
+    public void setName(String name)
     {
-        this.email = email;
+        this.name = name;
     }
 
     @NotNull
@@ -83,9 +87,21 @@ public class User
         this.password = password;
     }
 
+    @Length(min = 5, max = 15)
+    @Pattern(regex = "^\\w*$", message = "not a valid username")
+    public String getUsername()
+    {
+        return username;
+    }
+
+    public void setUsername(String username)
+    {
+        this.username = username;
+    }
+
     @Override
     public String toString()
     {
-        return "User(" + email + ")";
+        return "DummyUser(" + username + ")";
     }
 }
