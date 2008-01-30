@@ -11,6 +11,7 @@ $HeadURL::                                                                      
 */
 
 import com.ibt.intellimeet.ejb.EJBTest;
+import com.ibt.intellimeet.data.DummyUser;
 import org.testng.annotations.Test;
 
 import javax.naming.InitialContext;
@@ -19,21 +20,21 @@ import javax.transaction.TransactionManager;
 import java.util.logging.Logger;
 
 /**
- * UserTest Unit test for the User Entity
+ * DummyUserTest Unit test for the DummyUser Entity
  */
-public class UserTest
+public class DummyUserTest
         extends EJBTest
 {
 
-    Logger log = Logger.getLogger("UserTest");
+    Logger log = Logger.getLogger("DummyUserTest");
 
-    public UserTest()
+    public DummyUserTest()
     {
         super();
     }
 
     @Test
-    public void testUser()
+    public void testDummyUser()
             throws Exception
     {
 
@@ -43,9 +44,14 @@ public class UserTest
             protected void testComponents()
                     throws Exception
             {
+                // This is a transactionally aware EntityManager and must be accessed within a JTA transaction
+                // Why aren't we using javax.persistence.Persistence?  Well, our persistence.xml file uses
+                // jta-datasource which means that it is created by the EJB container/embedded JBoss.
+                // using javax.persistence.Persistence will just cause us an error
                 EntityManager em = (EntityManager)
                         new InitialContext().lookup
                                 ("java:/EntityManagers/DefaultDS");
+//                    getInstance("DefaultDS");
 
                 // Obtain JBoss transaction
                 TransactionManager tm =
@@ -54,22 +60,23 @@ public class UserTest
 
                 tm.begin();
 
-                User user = new User();
-                user.setEmail("test1@test.com");
-                user.setPassword("test1");
-                em.persist(user);
+                DummyUser dummyUser = new DummyUser();
+                dummyUser.setName("test1");
+                dummyUser.setUsername("test1");
+                dummyUser.setPassword("test1");
+                em.persist(dummyUser);
 
-                assert(user.getId() > 0);
+                assert (dummyUser.getId() > 0);
 
                 tm.commit();
-                long id = user.getId();
-                log.info("created user 'test1@test.com' in DB with id: " + id);
+                long id = dummyUser.getId();
+                log.info("created user 'test1' in DB with id: " + id);
 
                 tm.begin();
-                user = em.find(User.class, id);
-                assert(null != user);
+                dummyUser = em.find(DummyUser.class, id);
+                assert (null != dummyUser);
                 tm.commit();
-                log.info("found user 'test1@test.com' in DB with id: " + id);
+                log.info("found user 'test1' in DB with id: " + id);
             }
         }.run();
 

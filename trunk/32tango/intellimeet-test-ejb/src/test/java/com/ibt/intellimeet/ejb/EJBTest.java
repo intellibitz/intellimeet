@@ -10,7 +10,9 @@ $HeadURL::                                                                      
 -->
 */
 
-import com.ibt.intellimeet.data.User;
+import com.ibt.intellimeet.data.DummyUser;
+import com.ibt.intellimeet.app.DummyUserAction;
+import com.ibt.intellimeet.app.IDummyUserLocal;
 import org.jboss.deployers.spi.DeploymentException;
 import org.jboss.embedded.Bootstrap;
 import org.jboss.seam.mock.SeamTest;
@@ -47,8 +49,10 @@ public class EJBTest
     private static void deploy()
     {
         jar = AssembledContextFactory.getInstance()
-                .create("intellimeet-ejb.jar");
-        jar.addClass(User.class);
+                .create("intellimeet-test-ejb.jar");
+        jar.addClass(DummyUser.class);
+        jar.addClass(IDummyUserLocal.class);
+        jar.addClass(DummyUserAction.class);
         AssembledDirectory assembledDirectory = jar.mkdir("META-INF");
         assembledDirectory.addResource("META-INF/persistence.xml");
         assembledDirectory.addResource("META-INF/components.xml");

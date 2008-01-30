@@ -928,6 +928,7 @@
                 </property>
             </activation>
             <modules>
+                <module>intellimeet-test-ejb</module>
                 <module>intellimeet-ejb-tests</module>
                 <module>intellimeet-war-tests</module>
                 <module>intellimeet-ear-tests</module>
