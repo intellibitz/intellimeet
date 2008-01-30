@@ -688,10 +688,34 @@
                 <artifactId>geronimo-j2ee_1.4_spec</artifactId>
                 <version>1.0</version>
             </dependency>
+            <dependency>
+                <groupId>groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>1.1-rc-1</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>1.1-rc-1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>5.1</version>
+            <scope>test</scope>
+            <classifier>jdk15</classifier>
+        </dependency>
         <!--
                 <dependency>
                     <groupId>dbunit</groupId>
@@ -712,19 +736,6 @@
                     <scope>test</scope>
                 </dependency>
         -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>5.1</version>
-            <scope>test</scope>
-            <classifier>jdk15</classifier>
-        </dependency>
     </dependencies>
 
     <build>
@@ -737,6 +748,21 @@
                     <source>1.6</source>
                     <target>1.6</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo.groovy</groupId>
+                <artifactId>groovy-maven-plugin</artifactId>
+                <version>1.0-beta-3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generateStubs</goal>
+                            <goal>compile</goal>
+                            <goal>generateTestStubs</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -809,6 +835,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>2.3</version>
+<!--
                 <executions>
                     <execution>
                         <id>check</id>
@@ -818,6 +845,7 @@
                         <phase>process-sources</phase>
                     </execution>
                 </executions>
+-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -896,6 +924,7 @@
                     <excludes>
                         <exclude>**/*Bean.java</exclude>
                         <exclude>**/generated/*.java</exclude>
+                        <exclude>target</exclude>
                     </excludes>
                     <rulesets>
                         <ruleset>src/main/pmd/ruleset.xml</ruleset>
