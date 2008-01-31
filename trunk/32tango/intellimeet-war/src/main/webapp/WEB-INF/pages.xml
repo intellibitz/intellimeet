@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+$Id:: pom.xml 42 2008-01-30 14:08:57Z muthu.ramadoss                            $: Id of last commit
+$Rev:: 42                                                                       $: Revision of last commit
+$Author:: muthu.ramadoss                                                        $: Author of last commit
+$Date:: 2008-01-30 19:38:57 +0530 (Wed, 30 Jan 2008)                            $: Date of last commit
+$HeadURL:: https://intellimeet.googlecode.com/svn/trunk/32tango/pom.xml         $: Head URL of last commit
+-->
 <pages xmlns="http://jboss.com/products/seam/pages"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://jboss.com/products/seam/pages http://jboss.com/products/seam/pages-2.0.xsd"
@@ -8,32 +15,10 @@
 
     <page view-id="/home.xhtml">
 
-        <navigation>
-            <rule if="#{identity.loggedIn}">
-                <redirect view-id="/main.xhtml"/>
-            </rule>
-        </navigation>
-
-    </page>
-
-    <page view-id="/dummy/registerDummyUser.xhtml">
-
-        <action if="#{validation.failed}"
-                execute="#{dummyUserAction.invalid}"/>
-
-        <navigation>
-            <rule if="#{dummyUserAction.registered}">
-                <redirect view-id="/home.xhtml"/>
-            </rule>
-        </navigation>
-
     </page>
 
     <!-- Added for Registeration with User registerUser.xhtml-->
     <page view-id="/register/registerUser.xhtml">
-
-        <action if="#{validation.failed}"
-                execute="#{registerUserAction.invalid}"/>
 
         <navigation>
             <rule if="#{registerUserAction.registered}">
@@ -42,14 +27,5 @@
         </navigation>
 
     </page>
-
-
-
-    <exception class="org.jboss.seam.security.NotLoggedInException">
-        <redirect view-id="/home.xhtml">
-            <message severity="warn">You must be logged in to use this feature
-            </message>
-        </redirect>
-    </exception>
 
 </pages>
