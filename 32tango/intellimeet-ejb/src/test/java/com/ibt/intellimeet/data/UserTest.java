@@ -52,24 +52,40 @@ public class UserTest
                         (TransactionManager) new InitialContext().lookup
                                 ("java:/TransactionManager");
 
+                // testing CREATION
                 tm.begin();
 
                 User user = new User();
                 user.setEmail("test1@test.com");
                 user.setPassword("test1");
+                assert(user.getId() == 0);
                 em.persist(user);
+                tm.commit();
 
                 assert(user.getId() > 0);
-
-                tm.commit();
                 long id = user.getId();
                 log.info("created user 'test1@test.com' in DB with id: " + id);
 
+                // testing RETREIVAL
                 tm.begin();
                 user = em.find(User.class, id);
                 assert(null != user);
+                assert(user.getId() > 0);
+                assert ("test1".equals(user.getPassword()));
+                assert ("test1@test.com".equals(user.getEmail()));
                 tm.commit();
                 log.info("found user 'test1@test.com' in DB with id: " + id);
+
+                // testing REMOVE
+/*
+                tm.begin();
+                em.refresh(user);
+                em.remove(user);
+                log.info (user.toString());
+                tm.commit();
+                log.info("removed user 'test1@test.com' in DB with id: " + id);
+*/
+
             }
         }.run();
 
