@@ -1,4 +1,4 @@
-/*
+ /*
  *  Copyright 2008 vijayan.
  * 
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,11 +37,12 @@ import org.jboss.seam.annotations.Scope;
 import org.jboss.seam.log.Log;
 
 import javax.ejb.Remove;
-import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.io.Serializable;
 import java.util.List;
+import javax.ejb.Stateful;
+import org.hibernate.validator.NotNull;
 
 /**
  * @author vijayan
@@ -63,7 +64,7 @@ public class RegisterUserAction
 
     @PersistenceContext
     private EntityManager entityManager;
-
+    @NotNull
     private String verify;
     private boolean registered;
 
@@ -72,8 +73,9 @@ public class RegisterUserAction
         return entityManager.find(User.class, id);
     }
 
+    
     public long register()
-    {
+    {   
         if (user.getPassword().equals(verify))
         {
             List existing = entityManager.createQuery
@@ -81,9 +83,10 @@ public class RegisterUserAction
                     .getResultList();
             if (existing.isEmpty())
             {
-                entityManager.persist(user);
+                //entityManager.persist(user);
+                entityManager.merge(user);
                 // facesMessages.add("Successfully registered as #{user.username}");
-                log.info("Username #{user.email} already exists");
+                log.info("Username #{user.email} successfully created");
                 registered = true;
             }
             else
