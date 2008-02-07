@@ -88,6 +88,7 @@ public class RegisterUserAction
                 entityManager.merge(user);
                 // facesMessages.add("Successfully registered as #{user.username}");
                 log.info("Username #{user.email} successfully created");
+                FacesMessages.instance().add("Username #{user.email} successfully created");
                 registered = true;
             }
             else

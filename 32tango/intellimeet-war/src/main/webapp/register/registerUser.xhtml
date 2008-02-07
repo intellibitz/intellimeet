@@ -28,22 +28,29 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
                     <h:form id="registerUser">
                         <center><h2>Registration</h2></center>
                         <h3>Welcome to the Intellimeet world..........</h3>
-                        
-                        Enter Your email :<br/>
-                        <h:inputText id="email" value="#{user.email}" required="true">
-                            <!-- <a:support event="onblur" reRender="nameDecorate"/>-->
-                        </h:inputText> <br/><br/>
-                        
-                        Enter Password :<br/>
-                        <h:inputSecret  id="password" value="#{user.password}" required="true">
-                            <!-- <a:support event="onblur" reRender="nameDecorate"/> --> 
-                        </h:inputSecret> <br/><br/>
-                        
-                        Verify Password :<br/>
-                        <h:inputSecret  id="verify" value="#{registerUserAction.verify}" required="true">
-                            <!-- <a:support event="onblur" reRender="nameDecorate"/> -->
-                        </h:inputSecret> <br/><br/>
-                        
+                        <table border="0">
+                            <s:validateAll>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><h:inputText id="email" value="#{user.email}" required="true">
+                                            <!-- <a:support event="onblur" reRender="nameDecorate"/>-->
+                                    </h:inputText> </td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td><h:inputSecret  id="password" value="#{user.password}" required="true">
+                                            <!-- <a:support event="onblur" reRender="nameDecorate"/> --> 
+                                    </h:inputSecret></td>
+                                </tr>
+                                <tr>
+                                    <td>Verify Password</td>
+                                    <td><h:inputSecret  id="verify" value="#{registerUserAction.verify}" required="true">
+                                            <!-- <a:support event="onblur" reRender="nameDecorate"/> -->
+                                    </h:inputSecret></td>
+                                </tr>
+                            </s:validateAll>
+                        </table>
+                        <br/>
                         <h:commandButton id="RegisterUserAction" value="Register" action="#{registerUserAction.register}"/>
                         <s:button id="cancel" value="Cancel"
                                   view="/home.xhtml"/>
