@@ -21,54 +21,36 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         <link href="intellimeet.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-
-
- 
-
- 
-
-         <ui:composition template="../template/intellimeet.xhtml">
-
-             <ui:define name="title">IntelliMeet User Registration</ui:define>
-                 
-
-               <ui:define name="content">
-                   <h:form id="registerUser">
-
-
-                  <center><h2>Registration</h2></center>
-                  <h3>Welcome to the Intellimeet world..........</h3>
-
-                   Enter Your email :<br/>
-                  <h:inputText id="email" value="#{user.email}" required="true">
-                <!-- <a:support event="onblur" reRender="nameDecorate"/>-->
-                 </h:inputText> <br/><br/>
-
-                   Enter Password :<br/>
-                  <h:inputSecret  id="password" value="#{user.password}" required="true">
-              <!-- <a:support event="onblur" reRender="nameDecorate"/> --> 
-                 </h:inputSecret> <br/><br/>
-
-                   Verify Password :<br/>
-                  <h:inputSecret  id="verify" value="#{registerUserAction.verify}" required="true">
-               <!-- <a:support event="onblur" reRender="nameDecorate"/> -->
-                 </h:inputSecret> <br/><br/>
-
-
-                  <h:commandButton id="RegisterUserAction" value="Register" action="#{registerUserAction.register}"/>
+        <f:view>
+            <ui:composition template="../template/intellimeet.xhtml">
+                <ui:define name="title">IntelliMeet User Registration</ui:define>
+                <ui:define name="content">
+                    <h:form id="registerUser">
+                        <center><h2>Registration</h2></center>
+                        <h3>Welcome to the Intellimeet world..........</h3>
+                        
+                        Enter Your email :<br/>
+                        <h:inputText id="email" value="#{user.email}" required="true">
+                            <!-- <a:support event="onblur" reRender="nameDecorate"/>-->
+                        </h:inputText> <br/><br/>
+                        
+                        Enter Password :<br/>
+                        <h:inputSecret  id="password" value="#{user.password}" required="true">
+                            <!-- <a:support event="onblur" reRender="nameDecorate"/> --> 
+                        </h:inputSecret> <br/><br/>
+                        
+                        Verify Password :<br/>
+                        <h:inputSecret  id="verify" value="#{registerUserAction.verify}" required="true">
+                            <!-- <a:support event="onblur" reRender="nameDecorate"/> -->
+                        </h:inputSecret> <br/><br/>
+                        
+                        <h:commandButton id="RegisterUserAction" value="Register" action="#{registerUserAction.register}"/>
                         <s:button id="cancel" value="Cancel"
                                   view="/home.xhtml"/>
-                   </h:form>
-           </ui:define>
-           
-      </ui:composition>
-      
-
-
+                        <h:messages style="color: red"/>
+                    </h:form>
+                </ui:define>
+            </ui:composition>
+        </f:view>
     </body>    
-
-
-     
-
-      
 </html>
