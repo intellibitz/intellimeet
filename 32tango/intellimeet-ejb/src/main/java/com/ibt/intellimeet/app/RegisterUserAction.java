@@ -43,6 +43,7 @@ import java.io.Serializable;
 import java.util.List;
 import javax.ejb.Stateful;
 import org.hibernate.validator.NotNull;
+import org.jboss.seam.faces.FacesMessages;
 
 /**
  * @author vijayan
@@ -92,11 +93,13 @@ public class RegisterUserAction
             else
             {
                 log.info("Username #{user.email} already exists");
+                FacesMessages.instance().add("User #{user.email} already exists");
             }
         }
         else
         {
             log.info("Re-enter your password");
+            FacesMessages.instance().add("Didn't match. Re-enter your password again");
             verify = null;
         }
         return user.getId();
