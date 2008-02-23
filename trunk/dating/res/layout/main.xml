@@ -102,7 +102,14 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="10px"
                 android:text="Partner" />
-        
+                
+        <Button android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeft="@id/clear"
+                android:layout_alignTop="@id/clear"
+                android:text="Clear" />
+                
         <Button android:id="@+id/cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
