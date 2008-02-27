@@ -17,8 +17,7 @@
      <string name="status_bar_notifications_sad">madurai(</string>  
      <string name="status_bar_notifications_icons_and_marquee">Icons and marquee</string>
      <string name="status_bar_notifications_remote_views">Use remote views in balloon</string>
-     <string name = "activity_sample_code"> Activity Sample Code </string>  
+     <string name="userinfo"> User </string>  
      <string name="local_service_started">Local service has started</string>
      <string name="local_service_stopped">Local service has stopped</string>
-       
 </resources>
