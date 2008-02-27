@@ -6,15 +6,16 @@
      every 2 seconds for a minute</b></string>
      <string name="start_service">Start Service</string>
      <string name="stop_service">Stop Service</string>
-     <string name="status_bar_notifications_happy">chennai</string>
-     <string name="status_bar_notifications_happy_message">Salem</string>
+     <string name="status_bar_chennai">chennai</string>
+     <string name="status_bar_salem">Salem</string>
      <string name="status_bar_notifications_ok_message">I am ok</string>
-     <string name="status_bar_notifications_sad_message">Coimbatore</string>  
+     <string name="status_bar_coimbatore">Coimbatore</string>  
      <string name="status_bar_notifications_clear">Clear notification</string>
      <string name="status_bar_notifications_mood_title">Matching</string>
      <string name="status_bar_notifications_icons_only">Icons only</string>
-     <string name="status_bar_notifications_ok">erode</string> 
-     <string name="status_bar_notifications_sad">madurai(</string>  
+     <string name="status_bar_erode">Erode</string> 
+     <string name="status_bar_madurai">Madurai(</string>  
+     <string name="status_bar_nellai">Tirunelvelli</string>  
      <string name="status_bar_notifications_icons_and_marquee">Icons and marquee</string>
      <string name="status_bar_notifications_remote_views">Use remote views in balloon</string>
      <string name="userinfo"> User </string>  
