@@ -23,91 +23,29 @@
                 android:id="@+id/happy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_happy"
+                android:text="@string/status_bar_chennai"
             />
             
             <Button
                 android:id="@+id/neutral"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_ok" />
+                android:text="@string/status_bar_erode" />
             
             <Button
                 android:id="@+id/sad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_sad" />
-            
-        </LinearLayout>
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:text="@string/status_bar_notifications_icons_and_marquee" />
-        
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+                android:text="@string/status_bar_madurai" />
             
             <Button
-                android:id="@+id/happyMarquee"
+                android:id="@+id/sad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_happy" />
-            
-            <Button
-                android:id="@+id/neutralMarquee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_ok" />
-            
-            <Button
-                android:id="@+id/sadMarquee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_sad" />
-            
-        </LinearLayout>
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:text="@string/status_bar_notifications_remote_views" />
-        
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-            
-            <Button
-                android:id="@+id/happyViews"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_happy" />
-            
-            <Button
-                android:id="@+id/neutralViews"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_ok" />
-            
-            <Button
-                android:id="@+id/sadViews"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/status_bar_notifications_sad" />
-            
-        </LinearLayout>
-        
-        <Button android:id="@+id/clear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dip"
-                android:text="@string/status_bar_notifications_clear" />
-        
+                android:text="@string/status_bar_nellai" />
+
+            </LinearLayout>
+
     </LinearLayout>
     
 </ScrollView>
