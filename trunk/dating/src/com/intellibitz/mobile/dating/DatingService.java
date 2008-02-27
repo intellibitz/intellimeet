@@ -17,6 +17,10 @@ public class DatingService extends Service {
     @Override
     protected void onCreate() {
         mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        Intent contentIntent = new Intent(this, DatingServiceController.class);
+        Intent appIntent = new Intent(this, DatingServiceController.class);
+        mNM.notify(MOOD_NOTIFICATIONS, new Notification(this, R.drawable.stat_sample, "Matching service started", System.currentTimeMillis(), "Matching service started", "Matching service started", contentIntent,
+                R.drawable.no_picture, getText(R.string.userinfo), appIntent));
         thr = new Thread(null, mTask, "NotifyingService");
         thr.start();
     }
@@ -34,9 +38,6 @@ public class DatingService extends Service {
                 }
             } catch (Exception ex) {
             }
-
-            DatingService.this.stopSelf();
-            DatingService.this.stopSelf();
             DatingService.this.stopSelf();
         }
     };
@@ -61,7 +62,7 @@ public class DatingService extends Service {
         CharSequence text = getText(textId);
         mNM.notify(MOOD_NOTIFICATIONS, new Notification(this, moodId, null, System.currentTimeMillis(),
                 getText(R.string.status_bar_notifications_mood_title), text, contentIntent,
-                R.drawable.app_sample_code, getText(R.string.activity_sample_code), appIntent));
+                R.drawable.no_picture, getText(R.string.userinfo), appIntent));
         thr.stop();
     }
     private final IBinder mBinder = new Binder() {
