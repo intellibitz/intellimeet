@@ -7,8 +7,10 @@ package com.intellibitz.mobile.dating;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.Intent;
 
 /**
  *
@@ -16,14 +18,15 @@ import android.widget.EditText;
  */
 public class Dating extends Activity {
 
-    /** Called when the activity is first created. */
+	Button butSend;
+	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        // ToDo add your GUI initialization code here     
+        // ToDo add your GUI initialization code here     0
         setContentView(R.layout.main);
         Button partnerbutton = (Button) findViewById(R.id.Partner);
-        Button cancelbutton = (Button) findViewById(R.id.cancel);
+        //Button cancelbutton = (Button) findViewById(R.id.cancel);
         Button clearbutton = (Button) findViewById(R.id.clear);
         if (partnerbutton != null) {
             partnerbutton.setOnClickListener(new Button.OnClickListener() {
@@ -38,16 +41,23 @@ public class Dating extends Activity {
                         showAlert("Error", 0, "Information Required!", "OK", false);
                     } else {
                         setContentView(R.layout.partner);
+                        butSend = (Button)findViewById(R.id.send);
+                        if(butSend != null) {
+                            butSend.setOnClickListener(new OnClickListener() {
+                        	public void onClick(View v)
+                        	{
+                        		 Intent myIntent1 = new Intent(Dating.this, DatingServiceController.class); 
+                                 startActivity(myIntent1);     
+                        	}
+                        });
+                      }
                         Button backbutton = (Button) findViewById(R.id.back);
                         backbutton.setOnClickListener(new Button.OnClickListener() {
-
                             public void onClick(View v) {
                                 setContentView(R.layout.main);
-
                             }
                         });
                     }
-
                 }
             });
         }
@@ -66,5 +76,7 @@ public class Dating extends Activity {
                 }
             });
         }
+        
+      
     }
 }
