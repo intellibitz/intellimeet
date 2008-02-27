@@ -2,11 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
      package="com.intellibitz.mobile.dating">
     <application>
-         <activity android:name=".Dating" android:label="Dating">
-            <intent-filter>
+           <service android:name = "DatingService" android:process=":remote"/>
+            <activity android:name=".Dating" android:label="Dating">
+              <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-    </application>
+              </intent-filter>
+            </activity>
+           <activity android:name=".DatingServiceController" android:label="DatingServiceController"> 
+               <intent-filter>
+                  <action android:name="android.intent.action.EDIT"/>
+                  <category android:name="android.intent.category.LAUNCHER"/>
+               </intent-filter>
+            </activity>
+     </application>
 </manifest>
