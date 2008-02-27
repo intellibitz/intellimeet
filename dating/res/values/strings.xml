@@ -14,7 +14,7 @@
      <string name="status_bar_notifications_mood_title">Matching</string>
      <string name="status_bar_notifications_icons_only">Icons only</string>
      <string name="status_bar_erode">Erode</string> 
-     <string name="status_bar_madurai">Madurai(</string>  
+     <string name="status_bar_madurai">Madurai</string>  
      <string name="status_bar_nellai">Tirunelvelli</string>  
      <string name="status_bar_notifications_icons_and_marquee">Icons and marquee</string>
      <string name="status_bar_notifications_remote_views">Use remote views in balloon</string>
