@@ -29,12 +29,20 @@ public class DatingService extends Service {
         public void run() {
             try {
                 for (;;) {
-                    showNotification(R.drawable.stat_happy, R.string.status_bar_notifications_happy_message);
-                    Thread.sleep(2000);
-                    showNotification(R.drawable.stat_neutral, R.string.status_bar_notifications_happy);
-                    Thread.sleep(2000);
-                    showNotification(R.drawable.stat_sad, R.string.status_bar_notifications_sad_message);
-                    Thread.sleep(2000);
+                    showNotification(R.drawable.stat_happy, R.string.status_bar_chennai);
+                    Thread.sleep(3000);
+                    showNotification(R.drawable.stat_neutral, R.string.status_bar_coimbatore);
+                    Thread.sleep(3000);
+                    showNotification(R.drawable.stat_sad, R.string.status_bar_salem);
+                    Thread.sleep(3000);
+                    showNotification(R.drawable.stat_sad, R.string.status_bar_erode);
+                    Thread.sleep(3000);
+                    Thread.sleep(3000);
+                    showNotification(R.drawable.stat_sad, R.string.status_bar_nellai);
+                    Thread.sleep(3000);
+                    Thread.sleep(3000);
+                    showNotification(R.drawable.stat_sad, R.string.status_bar_madurai);
+                    Thread.sleep(3000);
                 }
             } catch (Exception ex) {
             }
