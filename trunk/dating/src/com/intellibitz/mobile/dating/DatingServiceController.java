@@ -38,11 +38,14 @@ public class DatingServiceController extends Activity {
                     count++;
                     //butDeactivate.setEnabled(true);
                     butActivate.setVisibility(Button.INVISIBLE);
+                    Intent intobject = new Intent(DatingServiceController.this,Matching_Profile.class);
+            		startActivity(intobject);
                 } else {
                     Toast.makeText(DatingServiceController.this, "Service already activated", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
         butDeactivate.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
@@ -55,10 +58,10 @@ public class DatingServiceController extends Activity {
                 // Cancel the persistent notification.
                 mNM.cancel(R.string.local_service_started);
 
-            // Tell the user we stopped.
-            //Toast.makeText(DatingServiceController.this, R.string.local_service_stopped, Toast.LENGTH_SHORT).show();
             }
         });
+
+
 
     }
 }
