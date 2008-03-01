@@ -13,12 +13,12 @@ import android.widget.EditText;
 import android.content.Intent;
 
 /**
- *
+ * 
  * @author jailani
  */
 public class Dating extends Activity {
 
-	Button butSend;
+	
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
@@ -26,11 +26,9 @@ public class Dating extends Activity {
         // ToDo add your GUI initialization code here     0
         setContentView(R.layout.main);
         Button partnerbutton = (Button) findViewById(R.id.Partner);
-        //Button cancelbutton = (Button) findViewById(R.id.cancel);
-        Button clearbutton = (Button) findViewById(R.id.clear);
+        final Button clearbutton = (Button) findViewById(R.id.clear);
         if (partnerbutton != null) {
             partnerbutton.setOnClickListener(new Button.OnClickListener() {
-
                 public void onClick(View v) {
                     EditText ageEditText = (EditText) findViewById(R.id.Age);
                     EditText heightEditText = (EditText) findViewById(R.id.Height);
@@ -40,43 +38,39 @@ public class Dating extends Activity {
                             (locationEditText.getText().toString().equals("")))) {
                         showAlert("Error", 0, "Information Required!", "OK", false);
                     } else {
-                        setContentView(R.layout.partner);
-                        butSend = (Button)findViewById(R.id.send);
-                        if(butSend != null) {
-                            butSend.setOnClickListener(new OnClickListener() {
-                        	public void onClick(View v)
-                        	{
-                        		 Intent myIntent1 = new Intent(Dating.this, DatingServiceController.class); 
-                                 startActivity(myIntent1);     
-                        	}
-                        });
-                      }
-                        Button backbutton = (Button) findViewById(R.id.back);
-                        backbutton.setOnClickListener(new Button.OnClickListener() {
-                            public void onClick(View v) {
-                                setContentView(R.layout.main);
-                            }
-                        });
-                    }
-                }
-            });
-        }
-        if (clearbutton != null) {
-            clearbutton.setOnClickListener(new Button.OnClickListener() {
 
-                public void onClick(View v1) {
-                    EditText ageEditText = (EditText) findViewById(R.id.Age);
-                    EditText heightEditText = (EditText) findViewById(R.id.Height);
-                    EditText weightEditText = (EditText) findViewById(R.id.Weight);
-                    EditText locationEditText = (EditText) findViewById(R.id.Location);
-                    ageEditText.setText("");
-                    heightEditText.setText("");
-                    weightEditText.setText("");
-                    locationEditText.setText("");
+                        Intent intent = new Intent(Dating.this, Partner.class);
+                        startActivity(intent);
+                       
+                      }
                 }
-            });
+            }
+            );
         }
+                       
+        
+            if (clearbutton != null) {
+                clearbutton.setOnClickListener(new Button.OnClickListener() {
+
+                    public void onClick(View v1) {
+                        EditText ageEditText = (EditText) findViewById(R.id.Age);
+                        EditText heightEditText = (EditText) findViewById(R.id.Height);
+                        EditText weightEditText = (EditText) findViewById(R.id.Weight);
+                        EditText locationEditText = (EditText) findViewById(R.id.Location);
+                        ageEditText.setText("");
+                        heightEditText.setText("");
+                        weightEditText.setText("");
+                        locationEditText.setText("");
+                    }
+                });
+            
+            }
+                }
+            
+            
+    }
+
         
       
-    }
-}
+    
+
