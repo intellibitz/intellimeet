@@ -9,11 +9,20 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
               </intent-filter>
             </activity>
-           <activity android:name=".DatingServiceController" android:label="DatingServiceController"> 
+           <activity android:name=".DatingServiceController" android:label="DatingServiceController">
                <intent-filter>
                   <action android:name="android.intent.action.EDIT"/>
                   <category android:name="android.intent.category.LAUNCHER"/>
                </intent-filter>
             </activity>
+
+            <activity android:name=".Matching_Profile" android:label="Matching_Profile">
+               <intent-filter>
+                  <action android:name="android.intent.action.EDIT"/>
+                  <category android:name="android.intent.category.LAUNCHER"/>
+               </intent-filter>
+            </activity>
+
+
      </application>
 </manifest>
