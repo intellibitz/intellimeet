@@ -21,7 +21,7 @@
         
     </TableRow>
     <TableRow>
-        <TextView android:id="@+id/dreamlabel"
+        <TextView android:id="@+id/dreamlabelage"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:text="Age:"/>
@@ -30,10 +30,10 @@
                    android:layout_height="wrap_content"
                    android:textSize="14sp"
                    android:background="@android:drawable/editbox_background"
-                   android:layout_below="@id/label"/>
+        />
     </TableRow>
     <TableRow>
-        <TextView android:id="@+id/dreamlabel"
+        <TextView android:id="@+id/dreamlabelsex"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:text="Sex:"/>
@@ -45,7 +45,7 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="horizontal">
             <RadioButton
-                android:id="@+id/widget30"
+                android:id="@+id/maleradiobutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
@@ -63,7 +63,7 @@
         </RadioGroup>
     </TableRow>
     <TableRow>
-        <TextView android:id="@+id/label"
+        <TextView android:id="@+id/labelheight"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:text="Height:"/>
@@ -75,7 +75,7 @@
         />
     </TableRow>
     <TableRow>
-        <TextView android:id="@+id/label"
+        <TextView android:id="@+id/labelweight"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:text="Weight:"/>
@@ -87,7 +87,7 @@
         />
     </TableRow>
     <TableRow>
-        <TextView android:id="@+id/label"
+        <TextView android:id="@+id/labellocation"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:text="Location:"/>
@@ -96,20 +96,22 @@
                   android:layout_height="wrap_content"
                   android:textSize="14sp" 
                   android:background="@android:drawable/editbox_background"
-                  android:layout_below="@id/label"/>
+        />
     </TableRow>
     <TableRow>
+        
         <Button android:id="@+id/send"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="10px"
-                android:text="Send" />
-        
+                android:text="Activate" />
+    
         <Button android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/cancel"
-                        android:text="Back" />
-            </TableRow>
-        </TableLayout>     
+                android:text="Back" />
+        
+    </TableRow>
+</TableLayout>     
