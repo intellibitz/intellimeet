@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+android:id="@+id/widget125"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="#e0ffff"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<TextView
+android:id="@+id/widget126"
+android:layout_width="fill_parent"
+android:layout_height="51px"
+android:text="Welcome! "
+android:textSize="22sp"
+
+android:textStyle="bold"
+android:textColor="#4b0082"
+android:layout_x="0px"
+android:layout_y="2px"
+>
+</TextView>
+<TextView
+android:id="@+id/widget127"
+android:layout_width="315px"
+android:layout_height="149px"
+android:text="Are you looking for a serious relationship possibly leading to marriage? Or are you after a casual partner and you'll  see where it leads? Or perhaps you just want some uncomplicated fun. Think about how you will write your personal profile and your hopes for a partner. Then write  about what you are looking  for in a potential dating match. You could just  create a profile, partner profile and wait for the alerts from the dating service. Who knows, you could get lucky and it might work out first time."
+android:textSize="12sp"
+android:textColor="#4b0082"
+android:layout_x="0px"
+android:layout_y="53px"
+>
+</TextView>
+<TextView
+android:id="@+id/widget128"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Wish you all success in your life !!!"
+android:textSize="15sp"
+android:textColor="#4b0082"
+android:textAlign="center"
+android:layout_x="40px"
+android:layout_y="195px"
+>
+</TextView>
+<TextView
+android:id="@+id/widget208"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Click on menu for filling your profile....."
+
+android:layout_x="20px"
+android:layout_y="275px"
+/>
+</AbsoluteLayout>
