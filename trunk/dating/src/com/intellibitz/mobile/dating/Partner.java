@@ -32,7 +32,7 @@ public class Partner extends Activity {
         backbutton.setOnClickListener(new Button.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(Partner.this, Dating.class);
+                Intent intent = new Intent(Partner.this, Seeker.class);
                 startActivity(intent);
             }
         });
