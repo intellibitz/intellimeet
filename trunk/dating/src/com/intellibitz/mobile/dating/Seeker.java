@@ -39,20 +39,15 @@ public class Seeker extends Activity {
                             (locationEditText.getText().toString().equals("")))) {
                         showAlert("Error", 0, "Information Required!", "OK", false);
                     } else {
-                        setContentView(R.layout.welcomeprofile);
-                        Button partnerbutton = (Button) findViewById(R.id.widget29);
-                        if (partnerbutton != null) {
-                      partnerbutton.setOnClickListener(new Button.OnClickListener() {
-                public void onClick(View v) {  
+                        
                         Intent intent = new Intent(Seeker.this, Partner.class);
                         startActivity(intent);
                        
                       }
-                });
+               
                         }
-            }
-                }
-            }
+                            }
+            
             
             );
         }
