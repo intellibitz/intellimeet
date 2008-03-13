@@ -9,17 +9,23 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:orientation="vertical"
              android:layout_width="fill_parent"
-             android:layout_height="fill_parent">"
-    <TableRow>
-        <TextView
+             android:layout_height="fill_parent">
+         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Profile"/>
-    </TableRow>
+            android:textColor="#ffffff"
+            android:text="Create your profile: This is the first and most important step. This profile will determine how others know about you. Spend time filling the open fields regarding your age, sex, height, weight  and location."/>
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text=""/>        
     <TableRow>
         <TextView android:id="@+id/label"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
+                  android:textColor="#ffffff"
+                  android:textSize="16sp"                   
                   android:text="Age:"/>
         <EditText  android:id="@+id/Age"
                    android:layout_width="wrap_content"
@@ -33,7 +39,9 @@
         <TextView android:id="@+id/label"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
-                  android:text="Sex:"/>
+                  android:textSize="16sp"                  
+                  android:text="Sex:"
+                  android:textColor="#ffffff"/>
         <RadioGroup
             android:id="@+id/widget29"
             android:layout_width="wrap_content"
@@ -45,7 +53,7 @@
                 android:id="@+id/maleradiobutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 android:text="Male"
                 android:textColor="#ffffff">
             </RadioButton>
@@ -53,7 +61,7 @@
                 android:id="@+id/femaleradiobutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 android:text="Female"
                 android:textColor="#ffffff">
             </RadioButton>
@@ -63,7 +71,8 @@
         <TextView android:id="@+id/label"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
-                  android:text="Height:"/>
+                  android:text="Height:"
+                  android:textColor="#ffffff"/>
         <EditText android:id="@+id/Height"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -76,7 +85,9 @@
         <TextView android:id="@+id/label"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
-                  android:text="Weight:"/>
+                  android:textSize="16sp"                  
+                  android:text="Weight:"
+                  android:textColor="#ffffff"/>
         <EditText android:id="@+id/Weight"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -89,7 +100,9 @@
         <TextView android:id="@+id/label"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
-                  android:text="Location:"/>
+                  android:textSize="16sp"
+                  android:text="Location:"
+                  android:textColor="#ffffff"/>
         <EditText android:id="@+id/Location"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
@@ -98,19 +111,16 @@
                   android:layout_below="@id/label"/>
     </TableRow>
     <TableRow>
-        <Button android:id="@+id/submit1"
-                android:layout_width="100px"
-                android:layout_height="50px"
-                
-                android:text="Submit" />
-           </TableRow>
-           <TableRow>
         <Button android:id="@+id/clear"
                 android:layout_width="100px"
                 android:layout_height="50px"
                 android:layout_alignParentLeft="true"
                 android:text="Clear" />
-                
+        
+        <Button android:id="@+id/submit1"
+                android:layout_width="100px"
+                android:layout_height="50px"
+                android:text="Submit" />
         
     </TableRow>
     
