@@ -18,60 +18,45 @@ import android.content.Intent;
  */
 public class Seeker extends Activity {
 
-	
-	/** Called when the activity is first created. */
+    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         // ToDo add your GUI initialization code here     0
         setContentView(R.layout.main);
         Button submitbutton = (Button) findViewById(R.id.submit1);
-        
+
         final Button clearbutton = (Button) findViewById(R.id.clear);
         if (submitbutton != null) {
             submitbutton.setOnClickListener(new Button.OnClickListener() {
+
                 public void onClick(View v) {
                     EditText ageEditText = (EditText) findViewById(R.id.Age);
                     EditText heightEditText = (EditText) findViewById(R.id.Height);
                     EditText weightEditText = (EditText) findViewById(R.id.Weight);
                     EditText locationEditText = (EditText) findViewById(R.id.Location);
-                    if ((ageEditText.getText().toString().equals("") || (heightEditText.getText().toString().equals("")) || (weightEditText.getText().toString().equals("")) ||
-                            (locationEditText.getText().toString().equals("")))) {
-                        showAlert("Error", 0, "Information Required!", "OK", false);
-                    } else {
-                        
-                        Intent intent = new Intent(Seeker.this, Partner.class);
-                        startActivity(intent);
-                       
-                      }
-               
-                        }
-                            }
-            
-            
-            );
-        }
-                       
-        
-            if (clearbutton != null) {
-                clearbutton.setOnClickListener(new Button.OnClickListener() {
+                    Intent intent = new Intent(Seeker.this, Partner.class);
+                    startActivity(intent);
 
-                    public void onClick(View v1) {
-                        EditText ageEditText = (EditText) findViewById(R.id.Age);
-                        EditText heightEditText = (EditText) findViewById(R.id.Height);
-                        EditText weightEditText = (EditText) findViewById(R.id.Weight);
-                        EditText locationEditText = (EditText) findViewById(R.id.Location);
-                        ageEditText.setText("");
-                        heightEditText.setText("");
-                        weightEditText.setText("");
-                        locationEditText.setText("");
-                    }
-                });
-            
-            }
                 }
-            
-            
+            });
+        }
+        if (clearbutton != null) {
+            clearbutton.setOnClickListener(new Button.OnClickListener() {
+
+                public void onClick(View v1) {
+                    EditText ageEditText = (EditText) findViewById(R.id.Age);
+                    EditText heightEditText = (EditText) findViewById(R.id.Height);
+                    EditText weightEditText = (EditText) findViewById(R.id.Weight);
+                    EditText locationEditText = (EditText) findViewById(R.id.Location);
+                    ageEditText.setText("");
+                    heightEditText.setText("");
+                    weightEditText.setText("");
+                    locationEditText.setText("");
+                }
+                });
+        }
+    }
     }
 
         
