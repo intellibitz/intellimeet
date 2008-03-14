@@ -3,22 +3,31 @@
     <string name="app_name">Dating Application</string>
     <string name="welcome">Dream-date Profile</string>
     <string name="notifying_service_controller"><b>This service will update a status bar notification
-     every 2 seconds for a minute</b></string>
+     every 15 seconds for a minute</b></string>
      <string name="start_service">Start Service</string>
      <string name="stop_service">Stop Service</string>
      <string name="status_bar_chennai">chennai</string>
      <string name="status_bar_salem">Salem</string>
      <string name="status_bar_notifications_ok_message">I am ok</string>
-     <string name="status_bar_coimbatore">Coimbatore</string>  
+     <string name="status_bar_coimbatore">Coimbatore</string>
      <string name="status_bar_notifications_clear">Clear notification</string>
      <string name="status_bar_notifications_mood_title">Matching</string>
      <string name="status_bar_notifications_icons_only">Icons only</string>
-     <string name="status_bar_erode">Erode</string> 
-     <string name="status_bar_madurai">Madurai</string>  
-     <string name="status_bar_nellai">Tirunelvelli</string>  
+     <string name="status_bar_erode">Erode</string>
+     <string name="status_bar_madurai">Madurai</string>
+     <string name="status_bar_nellai">Tirunelvelli</string>
      <string name="status_bar_notifications_icons_and_marquee">Icons and marquee</string>
      <string name="status_bar_notifications_remote_views">Use remote views in balloon</string>
-     <string name="userinfo"> User </string>  
+     <string name="userinfo"> User </string>
      <string name="local_service_started">Local service has started</string>
      <string name="local_service_stopped">Local service has stopped</string>
+
+    <!--   partner profile    -->
+    <string name="textage">Expected Age:</string>
+    <string name="textheight">Expected Height:</string>
+    <string name="textweight">Expected Weight:</string>
+    <string name="partner"> Specify the partner profile: This will help  others to have some idea of what you want. Please fill all the fields  that are an absolutely  must and  desirable.
+    </string>
+
+
 </resources>
