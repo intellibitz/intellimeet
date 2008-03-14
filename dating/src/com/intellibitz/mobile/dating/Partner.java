@@ -26,7 +26,6 @@ public class Partner extends Activity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s1.setAdapter(adapter);
 
-
         Spinner s2 = (Spinner) findViewById(R.id.heightspinner2);
         adapter = ArrayAdapter.createFromResource(this, R.array.height,
                 android.R.layout.simple_spinner_item);
@@ -51,26 +50,19 @@ public class Partner extends Activity {
         sendbutton.setOnClickListener(new Button.OnClickListener(){
         public void onClick(View V)
         	{
-
-
              Intent intobj = new Intent(Partner.this,DatingServiceController.class);
              startActivity(intobj);
-
             }
         });
         }
-
         Button backbutton = (Button) findViewById(R.id.back);
         if(backbutton!=null)
         {
         backbutton.setOnClickListener(new Button.OnClickListener(){
         public void onClick(View V)
         	{
-
-
              Intent intobj = new Intent(Partner.this,Seeker.class);
              startActivity(intobj);
-
             }
         });
         }
