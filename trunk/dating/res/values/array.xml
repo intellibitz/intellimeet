@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <array name="age">
-        <item>Select Your age </item>
+        <item>Select Age </item>
         <item>18-20</item>
         <item>21-23</item>
         <item>24-26</item>
@@ -16,7 +16,7 @@
         <item>above 50</item>
     </array>
     <array name="height">
-        <item>Select your height</item>
+        <item>Select Height</item>
         <item>140-145</item>
         <item>146-150</item>
         <item>151-155</item>
@@ -29,7 +29,7 @@
          <item>above 185</item>
     </array>
     <array name="weight">
-        <item>Select your weight</item>
+        <item>Select  Weight</item>
         <item>40-45</item>
         <item>46-50</item>
         <item>51-55</item>
