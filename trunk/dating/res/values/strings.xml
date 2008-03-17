@@ -29,5 +29,28 @@
     <string name="partner"> Specify the partner profile: This will help  others to have some idea of what you want. Please fill all the fields  that are an absolutely  must and  desirable.
     </string>
 
+    <!-- welcome page   -->
+    <string name="animation_2_text_1">WELCOME TO THE WORLD OF DATING</string>
+    <string name="animation_2_text_2">WherEver You Go We will Follow</string>
+    <string name="animation_2_text_3">To Make Your Dream Comes true</string>
+    <string name="animation_2_text_4">Connecting People</string>
+    <string name="link_text">Please click our website to know more details. click on http://www.intellibitz.com .  You can click on google.com too.</string>
 
+   <!-- Matching Profile   -->
+
+    <string name="repeating_received">If your expected Dream-mate profile
+                  found then you will receive notification every 10 seconds.</string>
+
+    <string name="repeating_scheduled">Dream mate found! Ready to chat now.</string>
+    <string name="repeating_unscheduled">stop service</string>
+    <string name="profile1">FEMALE,23,155 cm,55Kg,T.NAGAR</string>
+    <string name="profile2">FEMALE,18,156 cm,56Kg,T.NAGAR.</string>
+    <string name="profile3">FEMALE,19,157 cm, 57Kg,T.NAGAR.</string>
+    <string name="profile4">FEMALE,21,158 cm, 45Kg,T.NAGAR.</string>
+    <string name="profile5">FEMALE,22,145 cm, 50Kg,T.NAGAR.</string>
+    <string name="profile6">FEMALE,23,165 cm, 55Kg,T.NAGAR.</string>
+    <string name="profile7">FEMALE,24,160 cm, 52Kg,T.NAGAR.</string>
+    <string name="profile8">FEMALE,19,158 cm, 60Kg,T.NAGAR.</string>
+   
+    <string name="help"><b>Do you want to findout your Dream-mate?Then read the following things.</b></string>
 </resources>
