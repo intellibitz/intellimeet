@@ -191,7 +191,7 @@
                 </TextView>
                 
                 <Spinner     android:id="@+id/heightspinner2"
-                             android:layout_width="wrap_content"
+                             android:layout_width="175dip"
                              android:layout_height="35dip"
                              android:drawSelectorOnTop="true"
                              android:layout_x="130px"
@@ -206,7 +206,7 @@
                     android:layout_y="213px">
                 </TextView>
                 <Spinner     android:id="@+id/weightspinner3"
-                             android:layout_width="wrap_content"
+                             android:layout_width="175dip"
                              android:layout_height="35dip"
                              android:drawSelectorOnTop="true"
                              android:layout_x="130px"
@@ -254,7 +254,10 @@
             </LinearLayout>
             
             <!-- <<<<<<<<<<<<<<<<<<<<<<<<< HELP >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
+            <ScrollView
+                         android:layout_width="fill_parent"
+                         android:layout_height="fill_parent">
+    
             <LinearLayout android:id="@+id/help" 
                           android:orientation="vertical" 
                           android:padding="4dip"
@@ -274,28 +277,40 @@
                               android:layout_weight="0"
                               android:paddingBottom="4dip"
                               android:textColor="#4b0082"
-                              android:text=""/>
+                              android:text="@string/helpprofile"/>
                 <TextView     android:layout_width="fill_parent" 
                               android:layout_height="wrap_content"
                               android:layout_weight="0"
                               android:paddingBottom="4dip"
                               android:textColor="#4b0082"
-                              android:text=""/>
+                              android:text="@string/helppartner"/>
                 <TextView     android:layout_width="fill_parent" 
                               android:layout_height="wrap_content"
                               android:layout_weight="0"
                               android:paddingBottom="4dip"
                               android:textColor="#4b0082"
-                              android:text="3)Activate your service."/>
+                              android:text="@string/helpservice"/>
                 <TextView     android:layout_width="fill_parent" 
                               android:layout_height="wrap_content"
                               android:layout_weight="0"
                               android:paddingBottom="4dip"
                               android:textColor="#4b0082"
-                              android:text=""/>
+                              android:text="@string/helpalert"/>
+                <TextView     android:layout_width="fill_parent" 
+                              android:layout_height="wrap_content"
+                              android:layout_weight="0"
+                              android:paddingBottom="4dip"
+                              android:textColor="#4b0082"
+                              android:text="@string/helpinteraction"/>
+                <TextView     android:layout_width="fill_parent" 
+                              android:layout_height="wrap_content"
+                              android:layout_weight="0"
+                              android:paddingBottom="4dip"
+                              android:textColor="#4b0082"
+                              android:text="@string/helpbroadcast"/>
 
             </LinearLayout>
-            
+            </ScrollView>            
         </FrameLayout>
     </TabHost>
 </LinearLayout>    
