@@ -10,7 +10,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-                 <activity android:name=".Seeker" android:label="Enter your Details">
+                 <activity android:name=".Seeker" android:label="Dating">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
