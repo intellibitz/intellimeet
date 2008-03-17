@@ -19,8 +19,8 @@ public class DatingService extends Service {
     @Override
     protected void onCreate() {
         mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        Intent contentIntent = new Intent(this, Seeker.class);
-        Intent appIntent = new Intent(this, Seeker.class);
+        Intent contentIntent = new Intent();
+        Intent appIntent = new Intent();
         mNM.notify(MOOD_NOTIFICATIONS, new Notification(this, R.drawable.stat_sample, "Matching service started", System.currentTimeMillis(), "Matching service started", "Matching service started", contentIntent,
                 R.drawable.no_picture, getText(R.string.userinfo), appIntent));
         thr = new Thread(null, mTask, "NotifyingService");
@@ -67,8 +67,8 @@ public class DatingService extends Service {
     @SuppressWarnings("deprecation")
     private void showNotification(int moodId, int textId) {
 
-        Intent contentIntent = new Intent(this, Seeker.class);
-        Intent appIntent = new Intent(this, Seeker.class);
+        Intent contentIntent = new Intent();
+        Intent appIntent = new Intent();
         CharSequence text = getText(textId);
         mNM.notify(MOOD_NOTIFICATIONS, new Notification(this, moodId, null, System.currentTimeMillis(),
                 getText(R.string.status_bar_notifications_mood_title), text, contentIntent,
