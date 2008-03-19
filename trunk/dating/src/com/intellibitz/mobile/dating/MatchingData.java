@@ -39,8 +39,8 @@ public class MatchingData extends MapActivity {
         mFlipper.startFlipping();
         Button button = (Button) findViewById(R.id.chating);
         mMapView = (MapView) findViewById(R.id.map_whereami);
-        p1 = new Point((int) (17630996), (int) (79303084));
-        p2 = new Point((int) (13098200), (int) (80225937));
+        p1 = new Point((int) (13098200), (int) (80225937));
+        p2 = new Point((int) (17630996), (int) (79303084));
         p3 = new Point((int) (13312070), (int) (77633171));
         p4 = new Point((int) (19069509), (int) (72931043));
         MapController mc = mMapView.getController();
