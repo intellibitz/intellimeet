@@ -69,7 +69,7 @@
         android:textStyle="bold|italic" 
         android:textSize="20sp" 
         android:text="Location of Dream-Mates." 
-        android:textColor="#ff000f"
+        android:textColor="#00ffff"
         android:layout_below="@id/matching"/>
     
     <!--<<<<<<<<<<<<<<<<<<  SHOWING MAP >>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
