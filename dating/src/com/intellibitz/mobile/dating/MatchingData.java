@@ -1,5 +1,6 @@
 package com.intellibitz.mobile.dating;
 
+
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -13,7 +14,6 @@ import android.widget.ViewFlipper;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.Menu.Item;
 import com.google.android.maps.Overlay;
@@ -22,7 +22,7 @@ import com.google.android.maps.Point;
 
 /**
  *
- * @author jyothsna
+ * @author
  */
 public class MatchingData extends MapActivity {
 
@@ -34,9 +34,10 @@ public class MatchingData extends MapActivity {
     public void onCreate(Bundle icicle) {
 
         super.onCreate(icicle);
-        setContentView(R.layout.matching_profile);
+        setContentView(R.layout.matchingprofile);
         mFlipper = ((ViewFlipper) this.findViewById(R.id.flipper));
         mFlipper.startFlipping();
+
         Button button = (Button) findViewById(R.id.chating);
         mMapView = (MapView) findViewById(R.id.map_whereami);
         p1 = new Point((int) (13098200), (int) (80225937));
@@ -55,8 +56,9 @@ public class MatchingData extends MapActivity {
         button.setOnClickListener(new Button.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intobject = new Intent(MatchingData.this, Matching_Profile.class);
-                startActivity(intobject);
+
+               Intent intobject = new Intent(MatchingData.this, MatchingProfile.class);
+                  startActivity(intobject);
             }
             });
     }
@@ -152,7 +154,7 @@ public class MatchingData extends MapActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         boolean ret = super.onCreateOptionsMenu(menu);
-        menu.add(0, 1, "Back to WelcomePage");
+        menu.add(0, 1, "Back to Home");
         return ret;
     }
 
@@ -160,7 +162,7 @@ public class MatchingData extends MapActivity {
     public boolean onOptionsItemSelected(Item item) {
         switch (item.getId()) {
             case 1:
-                Intent intent = new Intent(MatchingData.this, Dating.class);
+                Intent intent = new Intent(MatchingData.this, Seeker.class);
                 startActivity(intent);
                 break;
         }
