@@ -127,7 +127,7 @@ public class MatchingProfile extends ListActivity {
             public void onClick(View v) {
             	 myDatabase.execSQL("CREATE TABLE IF NOT EXISTS Profile"
             			         +"(match1 VARCHAR, match2 VARCHAR, match3 VARCHAR, match4 VARCHAR);");
-            	 myDatabase.execSQL("INSERT INTO Profile1(match1,match2,match3,match4)" +
+            	 myDatabase.execSQL("INSERT INTO Profile(match1,match2,match3,match4)" +
             	 		           " VALUES  ('"+profile1+"','"+profile2+"','"+profile3+"','"+profile4+"');");
             	 Intent intent = new Intent(MatchingProfile.this,RepeatingAlarm.class);
                  AlarmManager am =(AlarmManager)getSystemService(ALARM_SERVICE);
