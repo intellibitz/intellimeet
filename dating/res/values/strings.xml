@@ -36,29 +36,30 @@
 
     <string name="repeating_scheduled">Dream mate found! Ready to chat now.</string>
     <string name="repeating_unscheduled">stop service</string>
-    <string name="profile1">FEMALE,23,155 cm,55Kg,HYDERABAD</string>
-    <string name="profile2">FEMALE,18,156 cm,56Kg,CHENNAI</string>
-    <string name="profile3">FEMALE,19,157 cm, 57Kg,BANGALORE</string>
-    <string name="profile4">FEMALE,21,158 cm, 45Kg,MUMBAI</string>
-      
+    <string name="profile1">SWEETY,FEMALE,23,155 cm,55Kg,HYDERABAD</string>
+    <string name="profile2">BABLI,FEMALE,18,156 cm,56Kg,CHENNAI</string>
+    <string name="profile3">LOLO,FEMALE,19,157 cm, 57Kg,BANGALORE</string>
+    <string name="profile4">AISH,FEMALE,21,158 cm, 45Kg,MUMBAI</string>
+
+    <!-- Main Profile   -->
     <string name="help"><b>Need to find your dreamdate on your mobile? Follow the steps.</b></string>
     <string name="helpprofile">Your Profile : First you need to fill your profile and this profile might be communicated to the matches if you wish so.</string>
     <string name="helppartner">Dream-date Profile: You must fill out a dream-date profile. This  the kind of
-                  profile that you request for dating. More than 1 dream-date profile can be stored, and the 
+                  profile that you request for dating. More than 1 dream-date profile can be stored, and the
                   Dating application will store this in your device locally. This information will also send
                   to the Dating server.</string>
-     <string name="helpservice">Service : Dating service runs in the background looking for dating matches for you. 
+     <string name="helpservice">Service : Dating service runs in the background looking for dating matches for you.
                    The service also listens for incoming messages from the Dating server and uses an
                    appropriate notification service to inform you.</string>
-     <string name="helpalert">Alerts : A Dating notifier will run along with the Dating service. This 
-                   notifier will alert you of all dating matches found. The dating alert will specify 
-                   Proximity and the Closeness of the Match. The Dating alert will use LBS, Maps and all 
+     <string name="helpalert">Alerts : A Dating notifier will run along with the Dating service. This
+                   notifier will alert you of all dating matches found. The dating alert will specify
+                   Proximity and the Closeness of the Match. The Dating alert will use LBS, Maps and all
                    kinds of locational api's to interact with you. </string>
      <string name="helpinteraction">Interaction : You can interact with the matches in your own way. You
                    can select one or more matches and communicate with the match in an anonymous way. You can
-                   save all the matching profiles in your mobile device locally for future communication. 
+                   save all the matching profiles in your mobile device locally for future communication.
                    Also you can delete this matching information at anytime.</string>
-     <string name="helpbroadcast">Location Broadcast : The dating service will be broadcasting your locations 
-                   to the dating server when you are on move. This location information need not be sent, 
+     <string name="helpbroadcast">Location Broadcast : The dating service will be broadcasting your locations
+                   to the dating server when you are on move. This location information need not be sent,
                    if you don't want. The polling interval can be set by you to broadcast your location every 5 minutes and you can also totally turn off this feature.</string>
 </resources>
