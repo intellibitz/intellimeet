@@ -19,6 +19,6 @@ public class RepeatingAlarm extends IntentReceiver
     @Override
     public void onReceiveIntent(Context context, Intent intent)
     {
-        Toast.makeText(context, R.string.repeating_received, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, R.string.repeating_scheduled, Toast.LENGTH_SHORT).show();
     }
 }
