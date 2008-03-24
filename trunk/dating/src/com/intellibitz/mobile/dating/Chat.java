@@ -15,8 +15,6 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,13 +27,13 @@ public class Chat extends Activity {
     private EditText txtNewMessage;
     private ListView listMessage;
     private TextView textMessage;
-    private int i;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        setTheme(android.R.style.Theme_Dialog);
         setContentView(R.layout.chat);
-        setTheme(android.R.style.Theme_ContextMenu);
+
         txtNewMessage = (EditText) findViewById(R.id.txtNewMessage);
         textMessage = (TextView) findViewById(R.id.message);
         final TextView tv = (TextView) findViewById(R.id.chatmessage);
