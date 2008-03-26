@@ -147,6 +147,7 @@ public class MatchingProfile extends ListActivity {
             mDialogue.setVisibility(expanded ? VISIBLE : GONE);
             mButton.setVisibility(expanded ? VISIBLE : GONE);
         }
+        
         private TextView mTitle;
         private TextView mDialogue;
     }
