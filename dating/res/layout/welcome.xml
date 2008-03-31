@@ -79,7 +79,7 @@
             android:id="@+id/icon1"
             android:layout_width="50px"
             android:layout_height="50px"
-            android:src="@drawable/icon1"
+            android:src="@drawable/profile"
             android:layout_x="10px"
             android:layout_y="160px"
         >
@@ -101,7 +101,7 @@
             android:id="@+id/icon2"
             android:layout_width="50px"
             android:layout_height="50px"
-            android:src="@drawable/icon2"
+            android:src="@drawable/activate"
             android:layout_x="128px"
             android:layout_y="160px"
         >
@@ -123,7 +123,7 @@
             android:id="@+id/icon3"
             android:layout_width="50px"
             android:layout_height="50px"
-            android:src="@drawable/icon3"
+            android:src="@drawable/map"
             android:layout_x="250px"
             android:layout_y="160px"
         >
@@ -144,7 +144,7 @@
             android:id="@+id/icon4"
             android:layout_width="50px"
             android:layout_height="50px"
-            android:src="@drawable/icon4"
+            android:src="@drawable/matching"
             android:layout_x="10px"
             android:layout_y="240px"
         >
@@ -176,7 +176,7 @@
             android:id="@+id/icon5"
             android:layout_width="50px"
             android:layout_height="50px"
-            android:src="@drawable/icon5"
+            android:src="@drawable/help"
             android:layout_x="128px"
             android:layout_y="240px"
         >
@@ -198,7 +198,7 @@
             android:id="@+id/icon6"
             android:layout_width="50px"
             android:layout_height="50px"
-            android:src="@drawable/icon6"
+            android:src="@drawable/quit"
             android:layout_x="250px"
             android:layout_y="240px"
         >
