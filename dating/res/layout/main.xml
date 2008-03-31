@@ -233,90 +233,15 @@
                              android:layout_x="130px"
                              android:layout_y="250px"/>
                 
-            </AbsoluteLayout>
-            
-            <!--- <<<<<<<<<<<<<<<<<<<<<<<<<   SERVICE ACTIVATION    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-            
-            <LinearLayout android:id="@+id/serviceActivate" 
-                          android:orientation="vertical" 
-                          android:padding="4dip"
-                          android:gravity="center_horizontal"
-                          android:layout_width="fill_parent" 
-                          android:layout_height="fill_parent"
-                          android:background="#ffffff">
-                
-                <TextView     android:layout_width="fill_parent" 
-                              android:layout_height="wrap_content"
-                              android:layout_weight="0"
-                              android:paddingBottom="4dip"
-                              android:textStyle = "bold"
-                              android:textColor="#4b0082"
-                              android:text="Activate the service to get alert from Dating server when your Dream-Date close to you."/>
-                
                 <Button      android:id="@+id/Activate"
                              android:layout_width="wrap_content" 
                              android:layout_height="wrap_content" 
-                             android:text="Activate"/>
-            </LinearLayout>
+                             android:text="Submit"
+                             android:layout_x="130px"
+                             android:layout_y="290px"/>
+            </AbsoluteLayout>
             
-            <!-- <<<<<<<<<<<<<<<<<<<<<<<<< HELP >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-            <LinearLayout android:id="@+id/help" 
-                          android:orientation="vertical" 
-                          android:padding="4dip"
-                          android:gravity="center_horizontal"
-                          android:layout_width="fill_parent" 
-                          android:layout_height="fill_parent"
-                          android:background="#ffffff">
-                
-                <TextView     android:layout_width="fill_parent" 
-                              android:layout_height="wrap_content"
-                              android:layout_weight="0"
-                              android:paddingBottom="4dip"
-                              android:textColor="#4b0082"
-                              android:text="@string/help"/>
-                <TextView     android:layout_width="fill_parent" 
-                              android:layout_height="wrap_content"
-                              android:layout_weight="0"
-                              android:paddingBottom="4dip"
-                              android:textSize="10px"
-                              android:textColor="#4b0082"
-                              android:text="@string/helpprofile"/>
-                <TextView     android:layout_width="fill_parent" 
-                              android:layout_height="wrap_content"
-                              android:layout_weight="0"
-                              android:paddingBottom="4dip"
-                              android:textSize="10px"
-                              android:textColor="#4b0082"
-                              android:text="@string/helppartner"/>
-                <TextView     android:layout_width="fill_parent" 
-                              android:layout_height="wrap_content"
-                              android:layout_weight="0"
-                              android:paddingBottom="4dip"
-                              android:textSize="10px"
-                              android:textColor="#4b0082"
-                              android:text="@string/helpservice"/>
-                <TextView     android:layout_width="fill_parent" 
-                              android:layout_height="wrap_content"
-                              android:layout_weight="0"
-                              android:paddingBottom="4dip"
-                              android:textSize="10px"
-                              android:textColor="#4b0082"
-                              android:text="@string/helpalert"/>
-                <TextView     android:layout_width="fill_parent" 
-                              android:layout_height="wrap_content"
-                              android:layout_weight="0"
-                              android:paddingBottom="4dip"
-                              android:textSize="10px"
-                              android:textColor="#4b0082"
-                              android:text="@string/helpinteraction"/>
-                <TextView     android:layout_width="fill_parent" 
-                              android:layout_height="wrap_content"
-                              android:layout_weight="0"
-                              android:paddingBottom="4dip"
-                              android:textSize="10px"
-                              android:textColor="#4b0082"
-                              android:text="@string/helpbroadcast"/>              
-            </LinearLayout>
+            
         </FrameLayout>
     </TabHost>
 </LinearLayout>    
