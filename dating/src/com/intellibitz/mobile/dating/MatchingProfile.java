@@ -91,10 +91,10 @@ public class MatchingProfile extends ListActivity {
         };
       private String[] mDialogue =
       {
-        		profile1="FEMALE,23,155 cm,55Kg,HYDERABAD",
-        		profile2="FEMALE,18,156 cm,56Kg,CHENNAI",
-        		profile3="FEMALE,19,157 cm, 57Kg,BANGALORE.",
-        		profile4="FEMALE,21,158 cm, 45Kg,MUMBAI.",
+        		profile1="FEMALE,23,155 cm,55Kg,St.ThomasMount",
+        		profile2="FEMALE,18,156 cm,56Kg,TNagar-Renganathan Street",
+        		profile3="FEMALE,19,157 cm, 57Kg,TNagar-Panagalpark.",
+        		profile4="FEMALE,21,158 cm, 45Kg,Adyar.",
      };
         private boolean[] mExpanded =
         {

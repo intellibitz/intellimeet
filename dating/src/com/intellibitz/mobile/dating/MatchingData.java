@@ -47,19 +47,20 @@ public class MatchingData extends MapActivity {
         bubbleIcon1 = BitmapFactory.decodeResource(getResources(),R.drawable.bubble1);
         Button button = (Button) findViewById(R.id.chating);
         mMapView = (MapView) findViewById(R.id.map_whereami);
-        p1 = new Point((int) (13098200), (int) (80225937));
-        p2 = new Point((int) (17630996), (int) (79303084));
-        p3 = new Point((int) (13312070), (int) (77633171));
-        p4 = new Point((int) (19069509), (int) (72931043));
+        p1 = new Point((int) (12961539), (int) (80186860));
+        p2 = new Point((int) (12994577), (int) (80199297));
+        p3 = new Point((int) (13036939), (int) (80230285));
+        p4 = new Point((int) (13042928), (int) (80232570));  
+        
         MapController mc = mMapView.getController();
         MyLocationOverlay mylocation = new MyLocationOverlay();
         OverlayController oc = mMapView.createOverlayController();
         oc.add(mylocation, true);
         mc.animateTo(p1);
-        mc.zoomTo(6);
+        mc.zoomTo(15);
         //Enable Sattelite-Mode, so we will se the
         // Statue of liberty instantly on the screen
-        mMapView.toggleSatellite();
+        //mMapView.toggleSatellite();
         button.setOnClickListener(new Button.OnClickListener() {
 
             public void onClick(View v) {
@@ -71,7 +72,7 @@ public class MatchingData extends MapActivity {
     }
 
     class MyLocationOverlay extends Overlay {
-
+        
         @Override
         public void draw(Canvas c, PixelCalculator calc, boolean shadow) {
             super.draw(c, calc, shadow);
@@ -152,7 +153,7 @@ public class MatchingData extends MapActivity {
     		hitTestRecr.offset(screenCoords[0],screenCoords[1]);
     		calculator.getPointXY(tapPoint, screenCoords);
     		if (hitTestRecr.contains(screenCoords[0],screenCoords[1])) {
-    			Toast.makeText(MatchingData.this, "This is your location. Click on dreammate for chat", Toast.LENGTH_LONG).show();
+    			Toast.makeText(MatchingData.this, "Cant' chat yourself. Look around to find your DreamDate for chatting", Toast.LENGTH_LONG).show();
     		
     		}
                 RectF hitTestRecr1 = new RectF();
