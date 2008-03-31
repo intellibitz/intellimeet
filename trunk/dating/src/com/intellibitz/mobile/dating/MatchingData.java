@@ -51,5 +51,6 @@ public class MatchingData extends Activity {
                 startActivity(intobject1);
             }
             });
+            
     }
 }
