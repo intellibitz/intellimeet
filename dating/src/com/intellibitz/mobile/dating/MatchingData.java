@@ -32,7 +32,7 @@ public class MatchingData extends MapActivity {
 
     private MapView mMapView;
     private ViewFlipper mFlipper;
-    private Point p1,  p2,  p3,  p4;
+    private Point p1,  p2,  p3,  p4, p5;
     private Bitmap bubbleIcon;
     private Bitmap bubbleIcon1;
 
@@ -51,7 +51,7 @@ public class MatchingData extends MapActivity {
         p2 = new Point((int) (12994577), (int) (80199297));
         p3 = new Point((int) (13036939), (int) (80230285));
         p4 = new Point((int) (13042928), (int) (80232570));  
-        
+        p5 = new Point((int) (13003145), (int) (80253532));
         MapController mc = mMapView.getController();
         MyLocationOverlay mylocation = new MyLocationOverlay();
         OverlayController oc = mMapView.createOverlayController();
@@ -80,6 +80,7 @@ public class MatchingData extends MapActivity {
             int coords1[] = new int[2];
             int coords2[] = new int[2];
             int coords3[] = new int[2];
+            int coords4[] = new int[2];            
             calc.getPointXY(p1, coords);
             RectF oval = new RectF(coords[0] - 7, coords[1] + 7, coords[0] + 7, coords[1] - 7);
             Paint paint = new Paint();
@@ -135,6 +136,22 @@ public class MatchingData extends MapActivity {
             paint3.setARGB(80, 255, 0, 0);
             c.drawBitmap(bubbleIcon1, coords3[0] - bubbleIcon.width() / 2, coords3[1] - bubbleIcon.height(), null);
             //c.drawOval(oval3, paint3);
+
+            calc.getPointXY(p5, coords4);
+            RectF oval4 = new RectF(coords4[0] - 7, coords4[1] + 7, coords4[0] + 7, coords4[1] - 7);
+            Paint paint4 = new Paint();
+            paint3.setStyle(Style.FILL);
+            paint3.setARGB(255, 0, 0, 0);
+            //calc.getPointXY(p4, coords1);
+            c.drawText("Dreammate4", coords4[0] + 9, coords4[1], paint4);
+            paint4.setARGB(255, 255, 0, 0);
+            paint4.setStrokeWidth(2);
+            c.drawLine(coords[0], coords[1], coords4[0], coords4[1], paint4);
+            paint4.setStrokeWidth(1);
+            paint4.setARGB(80, 255, 0, 0);
+            c.drawBitmap(bubbleIcon1, coords4[0] - bubbleIcon.width() / 2, coords4[1] - bubbleIcon.height(), null);
+            //c.drawOval(oval3, paint3);
+
         }
         @Override
         public boolean onTap(DeviceType devicetype,Point p,PixelCalculator calculator){
@@ -186,6 +203,16 @@ public class MatchingData extends MapActivity {
     			Intent intent=new Intent(MatchingData.this,Chat.class);
                    startActivity(intent);
     		}
+                RectF hitTestRecr4 = new RectF();
+		int[] screenCoords4 = new int[2];
+	    	calculator.getPointXY(p5, screenCoords4);
+    		hitTestRecr4.set(-bubbleIcon1.width()/2,-bubbleIcon1.height(),bubbleIcon1.width()/2,0);
+    		hitTestRecr4.offset(screenCoords4[0],screenCoords4[1]);
+    		calculator.getPointXY(tapPoint, screenCoords4);
+    		if (hitTestRecr4.contains(screenCoords4[0],screenCoords4[1])) {
+    			Intent intent=new Intent(MatchingData.this,Chat.class);
+                   startActivity(intent);
+    		}                
     	}
     }
     
