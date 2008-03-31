@@ -22,8 +22,10 @@ public class DatingServiceController extends Activity {
     int count = 0;
     NotificationManager mNM;
 
+    @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        setTheme(android.R.style.Theme_Dialog);
         setContentView(R.layout.dating_controller);
         partAge = new TextView(this);
         mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -34,11 +36,11 @@ public class DatingServiceController extends Activity {
 
             public void onClick(View v) {
                 if (count == 0) {
-                    startService(new Intent(DatingServiceController.this, DatingService.class), null);
+                    startService(new Intent(DatingServiceController.this, DatingService.class), null); finish();
                     count++;
                     //butDeactivate.setEnabled(true);
                     butActivate.setVisibility(Button.INVISIBLE);
-                    Intent intobject = new Intent(DatingServiceController.this,Matching_Profile.class);
+                    Intent intobject = new Intent(DatingServiceController.this,Dating.class);
             		startActivity(intobject);
                 } else {
                     Toast.makeText(DatingServiceController.this, "Service already activated", Toast.LENGTH_SHORT).show();
@@ -61,7 +63,7 @@ public class DatingServiceController extends Activity {
             }
         });
 
-
+       
 
     }
 }
