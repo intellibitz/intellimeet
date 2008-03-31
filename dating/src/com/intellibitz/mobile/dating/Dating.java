@@ -12,16 +12,6 @@ import android.widget.ViewFlipper;
 public class Dating extends Activity {
 
     private ViewFlipper mFlipper;
-    private static final Integer[] icons = new Integer[] {
-            R.drawable.icon1,
-            R.drawable.icon2,
-            R.drawable.icon3,
-            R.drawable.icon4,
-            R.drawable.icon5,
-            R.drawable.icon6
-           
-            
-    };
     private ViewGroup mContainer;
     private Intent intent;
 
