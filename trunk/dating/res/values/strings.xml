@@ -36,13 +36,13 @@
 
     <string name="repeating_scheduled">Dream mate found! Ready to chat now.</string>
     <string name="repeating_unscheduled">stop service</string>
-    <string name="profile1">SWEETY,FEMALE,23,155 cm,55Kg,HYDERABAD</string>
-    <string name="profile2">BABLI,FEMALE,18,156 cm,56Kg,CHENNAI</string>
-    <string name="profile3">LOLO,FEMALE,19,157 cm, 57Kg,BANGALORE</string>
-    <string name="profile4">AISH,FEMALE,21,158 cm, 45Kg,MUMBAI</string>
+    <string name="profile1">SWEETY,FEMALE,23,155 cm,55Kg,St.ThomasMount</string>
+    <string name="profile2">BABLI,FEMALE,18,156 cm,56Kg,TNagar-Renganathan Street</string>
+    <string name="profile3">LOLO,FEMALE,19,157 cm, 57Kg,TNagar-Panagalpark</string>
+    <string name="profile4">AISH,FEMALE,21,158 cm, 45Kg,Adyar</string>
 
     <!-- Main Profile   -->
-    <string name="help"><b>Need to find your dreamdate on your mobile? Follow the steps.</b></string>
+    <string name="help"><b>Need to find your dreamdate on your mobile? Follow these steps.</b></string>
     <string name="helpprofile">Your Profile : First you need to fill your profile and this profile might be communicated to the matches if you wish so.</string>
     <string name="helppartner">Dream-date Profile: You must fill out a dream-date profile. This  the kind of
                   profile that you request for dating. More than 1 dream-date profile can be stored, and the
