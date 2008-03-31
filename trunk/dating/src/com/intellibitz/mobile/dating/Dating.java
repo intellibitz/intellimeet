@@ -3,37 +3,89 @@ package com.intellibitz.mobile.dating;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.Menu.Item;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ViewFlipper;
+
 
 public class Dating extends Activity {
 
     private ViewFlipper mFlipper;
+    private static final Integer[] icons = new Integer[] {
+            R.drawable.icon1,
+            R.drawable.icon2,
+            R.drawable.icon3,
+            R.drawable.icon4,
+            R.drawable.icon5,
+            R.drawable.icon6
+           
+            
+    };
+    private ViewGroup mContainer;
+    private Intent intent;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        setTheme(android.R.style.Theme_ContextMenu);
         setContentView(R.layout.welcome);
         mFlipper = ((ViewFlipper) this.findViewById(R.id.flipper));
         mFlipper.startFlipping();
-    }
+        ImageView icon1=(ImageView) findViewById(R.id.icon1);
+        ImageView icon2=(ImageView) findViewById(R.id.icon2);
+        ImageView icon3=(ImageView) findViewById(R.id.icon3);
+        ImageView icon4=(ImageView) findViewById(R.id.icon4);
+        ImageView icon5=(ImageView) findViewById(R.id.icon5);
+        ImageView icon6=(ImageView) findViewById(R.id.icon6);
+        mContainer = (ViewGroup) findViewById(R.id.container);
+        ((ViewGroup) mContainer.getParent()).setKeepAnimations(true);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        boolean ret = super.onCreateOptionsMenu(menu);
-        menu.add(0, 1, "Get into");
-        return ret;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(Item item) {
-        switch (item.getId()) {
-            case 1:
-                Intent intent = new Intent(Dating.this, Seeker.class);
+        icon1.setOnClickListener(new View.OnClickListener() {
+        
+            public void onClick(View arg0) {
+                intent=new Intent(Dating.this,Seeker.class);
                 startActivity(intent);
-                break;
-        }
-        return super.onOptionsItemSelected(item);
+                 
+            }
+        });
+        icon2.setOnClickListener(new View.OnClickListener() {
+        
+            public void onClick(View arg0) {
+                Intent intent1=new Intent(Dating.this,DatingServiceController.class);
+                startActivity(intent1);
+            }
+        });
+        icon3.setOnClickListener(new View.OnClickListener() {
+        
+            public void onClick(View arg0) {
+                Intent intent2=new Intent(Dating.this,Map.class);
+                startActivity(intent2);
+            }
+        });
+        icon4.setOnClickListener(new View.OnClickListener() {
+        
+            public void onClick(View arg0) {
+                Intent intent3=new Intent(Dating.this,MatchingData.class);
+                startActivity(intent3);
+            }
+        });
+        icon5.setOnClickListener(new View.OnClickListener() {
+        
+            public void onClick(View arg0) {
+               Intent intent4=new Intent(Dating.this,Help.class);
+                startActivity(intent4);
+                
+            }
+        });
+       
+        icon6.setOnClickListener(new View.OnClickListener() {
+        
+            public void onClick(View arg0) {
+            finish();
+            }
+        });
+        
     }
+  
 }
